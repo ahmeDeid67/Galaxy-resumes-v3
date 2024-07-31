@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="GALAXY RESUMES is the best Professional Resume Writing Services that offers specialized, interview-winning, result-oriented, CV Writing Services, Globally."
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/style.min.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+
+    <title>Pricing Invoice</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div id="header-placeholder"></div>
+
+    <section class="pricing-invoice">
+      <div class="container">
+        <div class="invoice">
+          <div class="invoice-title">Experienced Category</div>
+          <div class="invoice-box">
+            <ul class="invoice-list">
+              <li class="invoice-item">
+                Indian Resume &dash; <span class="invoice-item-text">2100</span>
+              </li>
+            </ul>
+            <div class="invoice-total"><strong>Total</strong> - 3000</div>
+          </div>
+          <div class="invoice-btns">
+            <a href="pricing.html" class="invoice-btn">Back</a>
+            <a href="#" class="invoice-btn proceed-btn">Proceed for Payment</a>
+          </div>
+        </div>
+
+        <div class="invoice-payment">
+          <img
+            src="./assets/UPI.jpg"
+            alt="Adressess Logo"
+            class="invoice-img"
+          />
+          <p class="invoice-pay-text">PayTM / GPay / PhonePe – 9818749023</p>
+          <p class="invoice-pay-text">Net Banking</p>
+          <p class="invoice-pay-text">A/c Name -: GALAXY RESUMES</p>
+          <p class="invoice-pay-text">Bank - FEDERAL BANK</p>
+          <p class="invoice-pay-text">A/c No. - 23060200002209</p>
+          <p class="invoice-pay-text">A/c Type - CURRENT</p>
+          <p class="invoice-pay-text">IFSC Code - FDRL0002306</p>
+          <div class="invoice-footer">
+            <div class="invoice-instruction">
+              Once done with payment, simply send us Payment Screenshot through
+              Whats app or BOTIM at 9818749023 and we kick start the work within
+              5 minutes!!
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="header/header.js"></script>
+    <script src="footer/footer.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const invoiceList = document.querySelector(".invoice-list");
+        const invoiceTotal = document.querySelector(".invoice-total");
+        const invoiceBtn = document.querySelector(".invoice-btn");
+
+        let selectedPlan = localStorage.getItem("selectedPlan");
+        selectedPlan =
+          selectedPlan === "leadership"
+            ? "managerial or leadership"
+            : selectedPlan;
+        const selectedOptions = JSON.parse(
+          localStorage.getItem("selectedOptions")
+        );
+        const totalPrice = localStorage.getItem("totalPrice");
+
+        document.querySelector(
+          ".invoice-title"
+        ).innerHTML = `<span>You Selected-:</span> ${
+          selectedPlan || "No Selected"
+        } Category`;
+
+        invoiceList.innerHTML = "";
+
+        if (selectedOptions && selectedOptions.length > 0) {
+          selectedOptions.forEach((option) => {
+            const invoiceItem = document.createElement("div");
+            invoiceItem.classList.add("invoice-item");
+            invoiceItem.innerHTML = `<li>${option.name} <span>- Rs. ${option.price}</span></li>`;
+            invoiceList.appendChild(invoiceItem);
+          });
+        } else {
+          const noItems = document.createElement("div");
+          noItems.classList.add("invoice-item");
+          noItems.textContent = "No items selected";
+          invoiceList.appendChild(noItems);
+        }
+
+        invoiceTotal.innerHTML = `<strong>Total</strong> - Rs. ${
+          totalPrice || 0
+        }`;
+
+        localStorage.clear();
+      });
+
+      const invoicePay = document.querySelector(".proceed-btn");
+      const invoiceAddress = document.querySelector(".invoice-payment");
+
+      invoicePay.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        invoiceAddress.style.display = "block";
+      });
+    </script>
+  </body>
+</html>
