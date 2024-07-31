@@ -190,7 +190,6 @@
         </div>
 
         <div class="experienced experience hidden">
-          <!-- <h3>'Experienced' Category</h3> -->
           <form action="">
             <div>
               <input
@@ -332,7 +331,6 @@
         </div>
 
         <div class="leadership experience hidden">
-          <!-- <h3>'Managerial or Leadership' Category</h3> -->
           <form action="">
             <div>
               <input
@@ -587,50 +585,51 @@
         });
 
         // // /////////////////////////////////////////////////
-        // proceedBtn.forEach((btn) => {
-        //   btn.addEventListener("click", function (e) {
-        //     const selectedPlan = selectElement.value;
-        //     const selectedOptions = [];
-        //     let totalPrice = 0;
-        //     let isAnyCheckboxSelected = false;
+        proceedBtn.forEach((btn) => {
+          btn.addEventListener("click", function (e) {
+            const selectedPlan = selectElement.value;
+            const selectedOptions = [];
+            let totalPrice = 0;
+            let isAnyCheckboxSelected = false;
 
-        //     sections.forEach((section) => {
-        //       const checkboxes = section.querySelectorAll(
-        //         'input[type="checkbox"]:checked'
-        //       );
-        //       if (checkboxes.length > 0) {
-        //         isAnyCheckboxSelected = true; // Set the flag to true if any checkbox is selected
-        //       }
-        //       checkboxes.forEach((checkbox) => {
-        //         const price = parseInt(checkbox.getAttribute("data-price"));
-        //         totalPrice += price;
-        //         selectedOptions.push({
-        //           name: checkbox.getAttribute("data-name"),
-        //           price: price,
-        //         });
-        //       });
-        //     });
+            sections.forEach((section) => {
+              const checkboxes = section.querySelectorAll(
+                'input[type="checkbox"]:checked'
+              );
+              if (checkboxes.length > 0) {
+                isAnyCheckboxSelected = true; // Set the flag to true if any checkbox is selected
+              }
+              checkboxes.forEach((checkbox) => {
+                const price = parseInt(checkbox.getAttribute("data-price"));
+                totalPrice += price;
+                selectedOptions.push({
+                  name: checkbox.getAttribute("data-name"),
+                  price: price,
+                });
+              });
+            });
 
-        //     if (!isAnyCheckboxSelected) {
-        //       alert("Please select at least one option before proceeding.");
-        //       e.preventDefault(); // Prevent the default action
-        //       return; // Exit the function if no checkboxes are selected
-        //     }
+            if (!isAnyCheckboxSelected) {
+              alert("Please select at least one option before proceeding.");
+              e.preventDefault(); // Prevent the default action
+              return; // Exit the function if no checkboxes are selected
+            }
 
-        //     localStorage.setItem("selectedPlan", selectedPlan);
-        //     localStorage.setItem(
-        //       "selectedOptions",
-        //       JSON.stringify(selectedOptions)
-        //     );
-        //     localStorage.setItem("totalPrice", totalPrice);
+            localStorage.setItem("selectedPlan", selectedPlan);
+            localStorage.setItem(
+              "selectedOptions",
+              JSON.stringify(selectedOptions)
+            );
+            localStorage.setItem("totalPrice", totalPrice);
 
-        //     console.log(localStorage.getItem("selectedPlan"));
-        //     console.log(localStorage.getItem("selectedOptions"));
-        //     console.log(localStorage.getItem("totalPrice"));
+            console.log(localStorage.getItem("selectedPlan"));
+            console.log(localStorage.getItem("selectedOptions"));
+            console.log(localStorage.getItem("totalPrice"));
 
-        //     window.location.href = "invoice.html";
-        //   });
-        // });
+            window.location.href = "invoice.html";
+          });
+        });
+        ////////////////////////////////////////////////////
         proceedBtns.forEach((btn) => {
           btn.addEventListener("click", (e) => {
             e.preventDefault();
