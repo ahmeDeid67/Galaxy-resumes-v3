@@ -1118,7 +1118,7 @@ input[type="checkbox"]:checked::after {
 .invoice-choices {
   text-align: center;
   font-size: 24px;
-
+  font-style: italic;
   font-weight: bold;
 }
 
@@ -1126,10 +1126,21 @@ input[type="checkbox"]:checked::after {
   color: #000;
 }
 
+.invoice-pay-number {
+  font-size: 32px;
+}
+
 .invoice-cta {
   text-align: center;
   font-size: 18px;
   font-weight: bold;
+}
+
+.invoice-cta-text {
+  color: #144072;
+  margin-bottom: 24px;
+  font-style: italic;
+  display: block;
 }
 
 .invoice-btns {

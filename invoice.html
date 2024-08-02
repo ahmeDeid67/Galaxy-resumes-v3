@@ -48,10 +48,13 @@
               class="invoice-img"
             /> -->
             <img
-              src="./assets/parcode.jpeg"
+              src="./assets/upi-payment.jpg"
               alt="Parcode Image"
               class="parcode"
             />
+
+            <p class="invoice-pay-number">9818749023</p>
+            <br />
 
             <p class="invoice-pay-text">OR</p>
             <br />
@@ -73,10 +76,11 @@
           </div>
 
           <p class="invoice-cta">
-            Once done with payment, simply send us Payment Screenshot through
-            Whats app or BOTIM at 9818749023 and we kick start the work within 5
-            minutes!!<br /><br />Questions?!! Call or Whats app at +91 9818 749
-            023
+            <span class="invoice-cta-text"
+              >Once done with payment, simply send us Payment Screenshot through
+              Whats app or BOTIM at 9818749023 and we kick start the work within
+              5 minutes!!</span
+            >Questions?!! Call or Whats app at +91 9818 749 023
           </p>
           <div class="invoice-btns">
             <a href="pricing.html" class="invoice-btn">Back</a>
@@ -109,11 +113,11 @@
         );
         const totalPrice = localStorage.getItem("totalPrice");
 
-        document.querySelector(
-          ".invoice-title"
-        ).innerHTML = `<span>You Selected-:</span> ${
-          selectedPlan || "No Selected"
-        } Category`;
+        // document.querySelector(
+        //   ".invoice-title"
+        // ).innerHTML = `<span>You Selected-:</span> ${
+        //   selectedPlan || "No Selected"
+        // } Category`;
 
         // invoiceList.innerHTML = "";
 
