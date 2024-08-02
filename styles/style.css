@@ -1115,6 +1115,13 @@ input[type="checkbox"]:checked::after {
   font-weight: bold;
 }
 
+.invoice-choices {
+  text-align: center;
+  font-size: 24px;
+
+  font-weight: bold;
+}
+
 .invoice-total strong {
   color: #000;
 }
