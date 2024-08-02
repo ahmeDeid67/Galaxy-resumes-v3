@@ -1087,7 +1087,7 @@ input[type="checkbox"]:checked::after {
 .invoice-box {
   width: fit-content;
   margin: auto;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
 }
 
 .invoice-list {
@@ -1109,7 +1109,7 @@ input[type="checkbox"]:checked::after {
 }
 
 .invoice-total {
-  font-size: 24px;
+  font-size: 60px;
   margin-top: 30px;
   color: #cd5532;
   font-weight: bold;
@@ -1149,6 +1149,11 @@ input[type="checkbox"]:checked::after {
 
 .invoice-img {
   width: 100px;
+}
+
+.parcode {
+  width: 300px;
+  margin-bottom: 2rem;
 }
 
 .invoice-pay-text:first-of-type {
@@ -1733,6 +1738,22 @@ footer ul li:first-child {
   .contact-footer:last-of-type {
     right: 10px;
     background-color: #2eb841;
+  }
+
+  .invoice-title {
+    font-size: 24px;
+  }
+
+  .invoice-title span {
+    display: block;
+  }
+
+  .invoice-total {
+    font-size: 30px;
+  }
+
+  .parcode {
+    width: 250px;
   }
 }
 

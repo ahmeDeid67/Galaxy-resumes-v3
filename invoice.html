@@ -9,7 +9,7 @@
     />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="styles/style.min.css" />
+    <link rel="stylesheet" href="styles/style.css" />
 
     <!-- Font Awesome -->
     <link
@@ -31,11 +31,11 @@
         <div class="invoice">
           <div class="invoice-title">Experienced Category</div>
           <div class="invoice-box">
-            <ul class="invoice-list">
+            <!-- <ul class="invoice-list">
               <li class="invoice-item">
                 Indian Resume &dash; <span class="invoice-item-text">2100</span>
               </li>
-            </ul>
+            </ul> -->
             <div class="invoice-total"><strong>Total</strong> - 3000</div>
           </div>
           <div class="invoice-btns">
@@ -45,10 +45,15 @@
         </div>
 
         <div class="invoice-payment">
-          <img
+          <!-- <img
             src="./assets/UPI.jpg"
             alt="Adressess Logo"
             class="invoice-img"
+          /> -->
+          <img
+            src="./assets/parcode.jpeg"
+            alt="Parcode Image"
+            class="parcode"
           />
           <p class="invoice-pay-text">PayTM / GPay / PhonePe – 9818749023</p>
           <p class="invoice-pay-text">Net Banking</p>
@@ -77,7 +82,7 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const invoiceList = document.querySelector(".invoice-list");
+        // const invoiceList = document.querySelector(".invoice-list");
         const invoiceTotal = document.querySelector(".invoice-total");
         const invoiceBtn = document.querySelector(".invoice-btn");
 
@@ -97,21 +102,21 @@
           selectedPlan || "No Selected"
         } Category`;
 
-        invoiceList.innerHTML = "";
+        // invoiceList.innerHTML = "";
 
-        if (selectedOptions && selectedOptions.length > 0) {
-          selectedOptions.forEach((option) => {
-            const invoiceItem = document.createElement("div");
-            invoiceItem.classList.add("invoice-item");
-            invoiceItem.innerHTML = `<li>${option.name} <span>- Rs. ${option.price}</span></li>`;
-            invoiceList.appendChild(invoiceItem);
-          });
-        } else {
-          const noItems = document.createElement("div");
-          noItems.classList.add("invoice-item");
-          noItems.textContent = "No items selected";
-          invoiceList.appendChild(noItems);
-        }
+        // if (selectedOptions && selectedOptions.length > 0) {
+        //   selectedOptions.forEach((option) => {
+        //     const invoiceItem = document.createElement("div");
+        //     invoiceItem.classList.add("invoice-item");
+        //     invoiceItem.innerHTML = `<li>${option.name} <span>- Rs. ${option.price}</span></li>`;
+        //     invoiceList.appendChild(invoiceItem);
+        //   });
+        // } else {
+        //   const noItems = document.createElement("div");
+        //   noItems.classList.add("invoice-item");
+        //   noItems.textContent = "No items selected";
+        //   invoiceList.appendChild(noItems);
+        // }
 
         invoiceTotal.innerHTML = `<strong>Total</strong> - Rs. ${
           totalPrice || 0
