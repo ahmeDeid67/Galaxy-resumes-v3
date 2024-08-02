@@ -1779,6 +1779,18 @@ footer ul li:first-child {
   .parcode {
     width: 250px;
   }
+
+  .invoice-choices {
+    font-size: 20px;
+  }
+
+  .invoice-cta {
+    font-size: 12px;
+  }
+
+  .experience .proceed {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 530px) {
