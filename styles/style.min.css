@@ -22,6 +22,12 @@ body {
 .why-galaxy h2 {
   text-align: center;
 }
+.extra,
+.invoice-choices,
+.invoice-cta-text,
+.invoice-instruction {
+  font-style: italic;
+}
 .other-services .services,
 .samples-section .samples {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -465,11 +471,6 @@ header {
   border-radius: 10px;
   border: 2px solid #ccc;
 }
-.experience .proceed,
-.invoice-btn {
-  background-color: #cd5532;
-  font-weight: 700;
-}
 .other-services .services .service:hover,
 .slide:hover {
   transform: scale(1.1);
@@ -592,7 +593,6 @@ input[type="checkbox"]:checked::after {
 }
 .extra {
   font-weight: 700;
-  font-style: italic;
   color: #000;
   margin-left: 0.5rem;
 }
@@ -611,11 +611,13 @@ input[type="checkbox"]:checked::after {
   margin-inline: auto;
 }
 .experience .proceed {
+  background-color: #cd5532;
   padding: 0.5rem 1.2rem;
   border-radius: 15px;
   font-size: 2rem;
   display: inline-block;
   margin-bottom: 18px;
+  font-weight: 700;
   transition: background-color 0.3s;
   color: #fff;
   border: none;
@@ -670,7 +672,7 @@ input[type="checkbox"]:checked::after {
 }
 .invoice-box {
   width: fit-content;
-  margin: auto auto 150px;
+  margin: auto auto 50px;
 }
 .invoice-list {
   font-size: 18px;
@@ -684,13 +686,35 @@ input[type="checkbox"]:checked::after {
   list-style: disc;
 }
 .invoice-total {
-  font-size: 24px;
+  font-size: 60px;
   margin-top: 30px;
   color: #cd5532;
   font-weight: 700;
 }
+.invoice-choices {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
 .invoice-total strong {
   color: #000;
+}
+.invoice-pay-number {
+  font-size: 32px;
+}
+.invoice-btn,
+.invoice-cta,
+.invoice-instruction {
+  font-weight: 700;
+  font-size: 18px;
+}
+.invoice-cta {
+  text-align: center;
+}
+.invoice-cta-text {
+  color: #144072;
+  margin-bottom: 24px;
+  display: block;
 }
 .invoice-btns {
   display: flex;
@@ -699,7 +723,7 @@ input[type="checkbox"]:checked::after {
   gap: 20px;
 }
 .invoice-btn {
-  font-size: 18px;
+  background-color: #cd5532;
   color: #fff;
   padding: 12px 28px;
   border-radius: 6px;
@@ -710,13 +734,16 @@ input[type="checkbox"]:checked::after {
   margin-top: 16px;
 }
 .invoice-payment {
-  display: none;
   text-align: center;
   margin-top: 18px;
   margin-bottom: 24px;
 }
 .invoice-img {
   width: 100px;
+}
+.parcode {
+  width: 300px;
+  margin-bottom: 2rem;
 }
 .invoice-pay-text:first-of-type {
   font-size: 20px;
@@ -734,11 +761,6 @@ input[type="checkbox"]:checked::after {
 .invoice-footer {
   text-align: center;
   margin-top: 24px;
-}
-.invoice-instruction {
-  font-weight: 700;
-  font-size: 18px;
-  font-style: italic;
 }
 .other-services h2 {
   text-align: center;
@@ -1271,6 +1293,9 @@ footer ul li:first-child {
     padding-bottom: 0;
     width: fit-content;
   }
+  .experience .total {
+    font-size: 2rem;
+  }
   .pricing-lower-text {
     font-size: 0.7rem;
     margin-block: 1rem;
@@ -1303,6 +1328,28 @@ footer ul li:first-child {
     right: 10px;
     background-color: #2eb841;
   }
+  .invoice-title {
+    font-size: 24px;
+  }
+  .invoice-title span {
+    display: block;
+  }
+  .invoice-total {
+    font-size: 30px;
+  }
+  .parcode {
+    width: 250px;
+  }
+  .invoice-choices {
+    font-size: 20px;
+  }
+  .invoice-cta,
+  .invoice-pay-text:not(:first-of-type) {
+    font-size: 12px;
+  }
+  .experience .proceed {
+    font-size: 1.2rem;
+  }
   .menu {
     width: 35%;
     order: 2;
@@ -1321,7 +1368,6 @@ footer ul li:first-child {
     padding-top: 0.7rem;
   }
   .experience .total {
-    font-size: 2rem;
     margin-top: 0.5rem;
   }
   .slider-container {
@@ -1369,9 +1415,6 @@ footer ul li:first-child {
   }
   .invoice-btn {
     margin-bottom: 0;
-  }
-  .invoice-pay-text:not(:first-of-type) {
-    font-size: 12px;
   }
   .invoice-instruction {
     font-size: 14px;

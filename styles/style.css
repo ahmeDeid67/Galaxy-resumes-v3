@@ -136,26 +136,30 @@ header {
   position: relative;
   height: 241px;
   width: 100%;
-  background-image: url("../assets/basketpng.png");
+  /* background-image: url("../assets/basketpng.png");
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 0;
+  /* justify-content: space-around; */
+  padding: 2rem;
 }
 
 .showcase h1 {
-  position: absolute;
-  bottom: 30px;
-  left: 20px;
   font-family: "Jost", sans-serif;
-  color: #fff;
-  font-size: 1.5rem;
-  text-align: center;
-  width: 50%;
+  font-size: 3rem;
   font-weight: 700;
+  text-transform: uppercase;
+}
+
+.showcase .main-heading span:first-child {
+  color: #144072;
+}
+
+.showcase .main-heading span:last-child {
+  color: #144072;
+  font-size: 2.5rem;
 }
 
 .why-galaxy h2 {
@@ -260,6 +264,14 @@ header {
     opacity: 1;
   }
 } */
+.why-galaxy .trusted h3 {
+  text-align: left;
+}
+
+.why-galaxy .trusted p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
 
 .why-galaxy .trusted-images {
   position: relative;
@@ -998,6 +1010,15 @@ input[type="checkbox"]:checked::after {
 .experience label {
   font-size: 1.4rem;
   cursor: pointer;
+  color: #144072;
+}
+
+.experience label span:first-child {
+  color: #144072;
+}
+
+.experience label span:last-child {
+  color: #cd5532;
 }
 
 .experience .total {
@@ -1222,14 +1243,15 @@ input[type="checkbox"]:checked::after {
 
 .other-services .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 5rem 1rem;
-  padding-bottom: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 5rem;
 }
 
 .other-services .services .service {
   text-align: center;
   padding: 2rem 0.5rem;
+  height: 150px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   transition: transform 0.5s ease-in-out;
@@ -1237,7 +1259,7 @@ input[type="checkbox"]:checked::after {
 }
 
 .other-services .services .service:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .other-services .services .service i {
@@ -1247,13 +1269,13 @@ input[type="checkbox"]:checked::after {
 }
 
 .other-services .services .service h3 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #000;
 }
 
 .other-services .services .service .price {
   color: #525252;
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin-top: 0.5rem;
 }
 
@@ -1355,6 +1377,12 @@ input[type="checkbox"]:checked::after {
   font-size: 1.5rem;
   text-align: center;
   line-height: 2;
+}
+
+.get-text span {
+  display: inline-block;
+  margin-top: 2rem;
+  font-weight: bold;
 }
 
 .get--blue {
