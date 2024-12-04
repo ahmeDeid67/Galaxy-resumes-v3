@@ -151,12 +151,12 @@ header {
   font-size: 3.2rem;
   font-weight: 700;
   line-height: 1.9;
+  color: #144072;
 }
 
 .showcase p {
   font-size: 1.2rem;
   margin-top: 1rem;
-  color: #144072;
 }
 
 .showcase .main-heading span:first-child {
@@ -1292,7 +1292,7 @@ input[type="checkbox"]:checked::after {
 .other-services .services .service {
   text-align: center;
   padding: 1rem 0.5rem;
-  height: 150px;
+  height: 160px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   transition: transform 0.5s ease-in-out;
