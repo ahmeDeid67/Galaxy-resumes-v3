@@ -35,7 +35,7 @@ ul {
   margin-inline: auto;
   background-color: #fff;
   width: 100%;
-  max-width: 50rem;
+  max-width: 55rem;
   padding: 0.5rem 1rem;
   box-shadow: 10px 0 10px -5px rgba(0, 0, 0, 0.1),
     -10px 0 10px -5px rgba(0, 0, 0, 0.1);
@@ -1282,7 +1282,7 @@ input[type="checkbox"]:checked::after {
 
 .other-services .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
   margin-bottom: 5rem;
 }
@@ -1686,8 +1686,16 @@ footer ul li:first-child {
     margin-top: 160px;
   }
 
+  .showcase .container {
+    padding-top: 7rem;
+  }
+
   .showcase h1 {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .showcase p {
+    font-size: 0.7rem;
   }
 
   .why-galaxy h2 {
