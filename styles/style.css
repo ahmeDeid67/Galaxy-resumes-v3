@@ -203,6 +203,9 @@ header {
 .why-features .salient li {
   font-size: 1rem;
   margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
 }
 
 /* .why-features .salient li::before {
@@ -232,10 +235,23 @@ header {
   border-left: 20px solid #144072;
   border-right: 20px solid transparent;
   position: relative;
+  font-size: 0rem;
 }
 
 .counter--inner {
   position: absolute;
+  font-size: 1rem;
+  color: #144072;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #1440722a;
+  left: -30px;
+  top: -10.2px;
 }
 /* .counter {
   background-color: #fff;
