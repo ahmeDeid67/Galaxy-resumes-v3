@@ -143,15 +143,15 @@ header {
   /* display: flex;
   align-items: center; */
   /* justify-content: space-around; */
-  padding: 2rem;
+  /* padding: 2rem; */
 }
 
 .showcase h1 {
   font-family: "Jost", sans-serif;
-  font-size: 3.2rem;
-  font-weight: 700;
+  font-size: 3.9rem;
   line-height: 1.9;
   color: #144072;
+  font-weight: 400;
 }
 
 .showcase p {
@@ -161,10 +161,12 @@ header {
 
 .showcase .main-heading span:first-child {
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 .showcase .main-heading span:last-child {
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 .why-galaxy h2 {
