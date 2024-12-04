@@ -350,6 +350,7 @@ header {
 
 .why-galaxy .free-review p {
   font-size: 1rem;
+  text-align: justify;
 }
 
 .why-galaxy .free-review > p:first-of-type {
