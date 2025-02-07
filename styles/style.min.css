@@ -6,7 +6,7 @@ img {
   width: 100%;
 }
 .showcase h1,
-.why-galaxy h2 {
+.why__galaxy h2 {
   font-size: 1.5rem;
   text-align: center;
   font-family: Jost, sans-serif;
@@ -33,7 +33,8 @@ body {
 .header .contact p,
 .other-services h2,
 .showcase h1,
-.why-galaxy h2 {
+.why-galaxy h2,
+.why__galaxy h2 {
   font-family: Jost, sans-serif;
 }
 * {
@@ -164,8 +165,47 @@ header {
   width: 50%;
   font-weight: 700;
 }
-.why-galaxy h2 {
+.why__galaxy h2 {
+  color: #144072;
+  margin-bottom: 2rem;
+}
+.why__galaxy--items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+.why__galaxy--item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.why__galaxy--item .icon {
+  background-color: #eee;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.why__galaxy--item .icon ion-icon {
+  font-size: 1.2rem;
+}
+.instructions h4,
+.why__galaxy--item h3 {
   color: #cd5532;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.why__galaxy--item p {
+  font-size: 0.9rem;
+}
+.why-galaxy h2 {
+  text-align: center;
+  color: #cd5532;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
 }
 .why-features {
@@ -302,11 +342,6 @@ header {
   font-weight: 700;
 }
 .instructions {
-  margin-bottom: 0.5rem;
-}
-.instructions h4 {
-  color: #cd5532;
-  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 .instructions li {
@@ -1261,7 +1296,8 @@ footer ul li:first-child {
   .get-text,
   .header .contact .icons i,
   .hidden-box p span,
-  .other-services .services .service h3 {
+  .other-services .services .service h3,
+  .showcase h1 {
     font-size: 1rem;
   }
   .blog li,
@@ -1274,19 +1310,15 @@ footer ul li:first-child {
   .hidden-box p {
     font-size: 0.8rem;
   }
+  .blogs .container > h2,
+  .why-galaxy h2 {
+    font-size: 1.5rem;
+  }
   .showcase {
     margin-top: 160px;
   }
   .showcase .container {
     padding-top: 2.5rem;
-  }
-  .experience .total,
-  .showcase h1 {
-    font-size: 2rem;
-  }
-  .blogs .container > h2,
-  .why-galaxy h2 {
-    font-size: 1.5rem;
   }
   .why-galaxy .features-right {
     display: grid;
@@ -1325,6 +1357,9 @@ footer ul li:first-child {
   .experience {
     padding-bottom: 0;
     width: fit-content;
+  }
+  .experience .total {
+    font-size: 2rem;
   }
   .pricing-lower-text {
     font-size: 0.7rem;
