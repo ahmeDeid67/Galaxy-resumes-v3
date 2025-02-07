@@ -752,6 +752,12 @@ header {
   justify-content: space-between;
 }
 
+@media (min-width: 768px) {
+  .modal-arrows {
+    width: 50%;
+  }
+}
+
 /* Reviews */
 /* .reviews {
   padding-bottom: 3rem;

@@ -253,6 +253,7 @@ header {
   color: #fff;
   position: absolute;
 }
+
 .counter::after,
 .modal {
   width: 100%;
@@ -454,6 +455,7 @@ header {
 .close:hover {
   color: #bbb;
 }
+
 .modal-arrows {
   width: 100%;
   height: 100%;
@@ -462,6 +464,11 @@ header {
   font-size: 2rem;
   display: flex;
   justify-content: space-between;
+}
+@media (min-width: 1000px) {
+  .modal-arrows {
+    width: 50%;
+  }
 }
 .reviews,
 .slider {
