@@ -1166,7 +1166,7 @@ footer ul li:first-child {
   }
   .modal-content {
     width: 90%;
-    height: 60%;
+    height: 90%;
   }
 }
 @media (min-width: 773px) {
@@ -1279,7 +1279,7 @@ footer ul li:first-child {
     margin-top: 2rem;
   }
   .close {
-    top: 15px;
+    top: 165px;
     right: 25px;
   }
   .why-galaxy .trusted-images {
