@@ -867,7 +867,7 @@ input[type="checkbox"]:checked::after {
 .other-services .services .service {
   text-align: center;
   padding: 1rem 0.5rem;
-  height: 160px;
+  /* height: 160px; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
