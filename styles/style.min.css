@@ -477,14 +477,14 @@ header {
 .reviews {
   padding-bottom: 3rem;
 }
-@keyframes slide {
+/* @keyframes slide {
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(-100%);
   }
-}
+} */
 .slider {
   overflow: hidden;
   display: flex;
@@ -1523,4 +1523,8 @@ footer ul li:first-child {
   .invoice-instruction {
     font-size: 14px;
   }
+}
+.disabled {
+  pointer-events: none;
+  opacity: 0.5; /* Optional: makes it look inactive */
 }

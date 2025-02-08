@@ -1015,10 +1015,10 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="arrows">
-            <i class="fa-solid fa-chevron-left chevron-review-left"></i>
-            <i class="fa-solid fa-chevron-right chevron-review-right"></i>
+            <div class="arrows">
+              <i class="fa-solid fa-chevron-left chevron-review-left"></i>
+              <i class="fa-solid fa-chevron-right chevron-review-right"></i>
+            </div>
           </div>
         </section>
 
@@ -1158,82 +1158,158 @@
         setTimeout(animateChevron, 2000); // Adjust the interval time as needed
       })();
 
-      // slider
-      let currentSlide = 0;
-      const slides = document.querySelectorAll(".slide");
-      const dots = document.querySelectorAll(".dot");
-      const arrows = document.querySelectorAll(
-        ".chevron-review-left, .chevron-review-right"
-      );
+      document.addEventListener("DOMContentLoaded", function () {
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slide");
+        const dots = document.querySelectorAll(".dot");
+        const leftArrow = document.querySelector(".chevron-review-left");
+        const rightArrow = document.querySelector(".chevron-review-right");
+        const sliderContainer = document.querySelector(".slider-container");
+        let intervalId; // Declare interval globally
 
-      function showSlide(slideIndex) {
-        slides.forEach((slide, index) => {
-          slide.style.transform = `translateX(-${100 * slideIndex}%)`;
-        });
+        if (!slides.length || !leftArrow || !rightArrow) {
+          console.error(
+            "Error: Missing elements! Check your HTML class names."
+          );
+          return;
+        }
 
-        dots.forEach((dot, index) => {
-          dot.classList.remove("active");
-          if (index === slideIndex) {
-            dot.classList.add("active");
-          }
-        });
-      }
+        function showSlide(slideIndex) {
+          slides.forEach((slide, index) => {
+            slide.style.transition = "transform 0.5s ease-in-out"; // Smooth transition
+            slide.style.transform = `translateX(-${100 * slideIndex}%)`;
+          });
 
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-      }
+          dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === slideIndex);
+          });
+        }
 
-      function prevSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
-      }
-
-      // Function to move to the next slide every 2 seconds
-      let intervalId = setInterval(nextSlide, 5000);
-
-      // Function to stop the automatic movement
-      function stopInterval() {
-        clearInterval(intervalId);
-      }
-
-      // Function to restart the automatic movement
-      function startInterval() {
-        clearInterval(intervalId);
-        intervalId = setInterval(nextSlide, 5000);
-      }
-
-      // Call the startInterval() function to begin automatic movement
-      startInterval();
-
-      // Event listener to pause the automatic movement when mouse is over the slider
-      document
-        .querySelector(".slider-container")
-        .addEventListener("mouseenter", stopInterval);
-
-      // Event listener to restart the automatic movement when mouse leaves the slider
-      document
-        .querySelector(".slider-container")
-        .addEventListener("mouseleave", startInterval);
-
-      // Event listeners for pagination dots
-      dots.forEach((dot, index) => {
-        dot.addEventListener("click", () => {
-          currentSlide = index;
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % slides.length;
           showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+          showSlide(currentSlide);
+        }
+
+        function startAutoSlide() {
+          clearInterval(intervalId); // Reset interval before starting a new one
+          intervalId = setInterval(nextSlide, 2000);
+        }
+
+        function stopAutoSlide() {
+          clearInterval(intervalId);
+        }
+
+        // Restart auto-slide on manual click
+        leftArrow.addEventListener("click", () => {
+          prevSlide();
+          startAutoSlide(); // Reset auto-slide timer
         });
+
+        rightArrow.addEventListener("click", () => {
+          nextSlide();
+          startAutoSlide(); // Reset auto-slide timer
+        });
+
+        if (sliderContainer) {
+          sliderContainer.addEventListener("mouseenter", stopAutoSlide);
+          sliderContainer.addEventListener("mouseleave", startAutoSlide);
+        }
+
+        // Event listeners for pagination dots
+        dots.forEach((dot, index) => {
+          dot.addEventListener("click", () => {
+            currentSlide = index;
+            showSlide(currentSlide);
+            startAutoSlide(); // Reset auto-slide timer
+          });
+        });
+
+        // Start automatic sliding
+        startAutoSlide();
+        showSlide(currentSlide); // Ensure first slide is visible
       });
 
-      // Event listeners for arrow clicks
-      arrows.forEach((arrow, index) => {
-        arrow.addEventListener("click", () => {
-          if (index === 0) {
-            prevSlide();
-          } else {
-            nextSlide();
-          }
-        });
-      });
+      // slider
+      // let currentSlide = 0;
+      // const slides = document.querySelectorAll(".slide");
+      // const dots = document.querySelectorAll(".dot");
+      // const arrows = document.querySelectorAll(
+      //   ".chevron-review-left, .chevron-review-right"
+      // );
+
+      // function showSlide(slideIndex) {
+      //   slides.forEach((slide, index) => {
+      //     slide.style.transform = `translateX(-${100 * slideIndex}%)`;
+      //   });
+
+      //   dots.forEach((dot, index) => {
+      //     dot.classList.remove("active");
+      //     if (index === slideIndex) {
+      //       dot.classList.add("active");
+      //     }
+      //   });
+      // }
+
+      // function nextSlide() {
+      //   currentSlide = (currentSlide + 1) % slides.length;
+      //   showSlide(currentSlide);
+      // }
+
+      // function prevSlide() {
+      //   currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      //   showSlide(currentSlide);
+      // }
+
+      // // Function to move to the next slide every 2 seconds
+      // let intervalId = setInterval(nextSlide, 5000);
+
+      // // Function to stop the automatic movement
+      // function stopInterval() {
+      //   clearInterval(intervalId);
+      // }
+
+      // // Function to restart the automatic movement
+      // function startInterval() {
+      //   clearInterval(intervalId);
+      //   intervalId = setInterval(nextSlide, 5000);
+      // }
+
+      // // Call the startInterval() function to begin automatic movement
+      // startInterval();
+
+      // // Event listener to pause the automatic movement when mouse is over the slider
+      // document
+      //   .querySelector(".slider-container")
+      //   .addEventListener("mouseenter", stopInterval);
+
+      // // Event listener to restart the automatic movement when mouse leaves the slider
+      // document
+      //   .querySelector(".slider-container")
+      //   .addEventListener("mouseleave", startInterval);
+
+      // // Event listeners for pagination dots
+      // dots.forEach((dot, index) => {
+      //   dot.addEventListener("click", () => {
+      //     currentSlide = index;
+      //     showSlide(currentSlide);
+      //   });
+      // });
+
+      // // Event listeners for arrow clicks
+      // arrows.forEach((arrow, index) => {
+      //   arrow.addEventListener("click", () => {
+      //     if (index === 0) {
+      //       prevSlide();
+      //     } else {
+      //       nextSlide();
+      //     }
+      //   });
+      // });
       // let currentSlide = 0;
       // const slides = document.querySelectorAll(".slide");
 
