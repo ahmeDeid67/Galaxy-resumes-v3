@@ -510,6 +510,30 @@ header {
 .slider:hover .slider--container {
   animation-play-state: paused;
 }
+.arrows {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100%;
+  padding: 1rem;
+  z-index: 100;
+}
+
+.arrows i {
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.arrows i:hover {
+  font-size: 2rem;
+}
 .slider--container {
   display: flex;
   gap: 1rem;
@@ -691,12 +715,17 @@ input[type="checkbox"]:checked::after {
 }
 .invoice-item span,
 .invoice-title span,
-.open .icon,
+/* .open .icon,
 .open .number,
-.open .text,
+.open .text, */
 .other-services .services .service .price p > span,
 .pricing-color {
   color: #cd5532;
+}
+.open .number,
+.open .text,
+.open .icon {
+  color: #144072;
 }
 .pricing-line {
   border-bottom: 2px solid #000;
@@ -852,7 +881,7 @@ input[type="checkbox"]:checked::after {
 }
 .other-services .services .service h3 {
   font-size: 1.4rem;
-  color: #000;
+  color: #144072;
 }
 .other-services .services .service .price {
   color: #525252;
@@ -886,13 +915,16 @@ input[type="checkbox"]:checked::after {
 .text {
   font-size: 24px;
   font-weight: 500;
+  color: #144072;
 }
 .number {
-  color: #555;
+  /* color: #555; */
+  color: #144072;
 }
 .icon {
   width: 24px;
   height: 24px;
+  color: #144072;
 }
 .contact-footer,
 .contact-footer .icon,
@@ -1279,7 +1311,7 @@ footer ul li:first-child {
     margin-top: 2rem;
   }
   .close {
-    top: 165px;
+    top: 130px;
     right: 25px;
   }
   .why-galaxy .trusted-images {

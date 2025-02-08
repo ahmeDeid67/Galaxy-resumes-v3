@@ -939,6 +939,31 @@ header {
   animation: 150s slide infinite linear;
 }
 
+.arrows {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100%;
+  padding: 1rem;
+  z-index: 100;
+}
+
+.arrows i {
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.arrows i:hover {
+  font-size: 2rem;
+}
+
 .slide {
   width: 400px;
   flex: 0 0 auto;
@@ -1408,7 +1433,7 @@ input[type="checkbox"]:checked::after {
 
 .other-services .services .service h3 {
   font-size: 1.4rem;
-  color: #000;
+  color: #144072;
 }
 
 .other-services .services .service .price {
@@ -1452,6 +1477,7 @@ input[type="checkbox"]:checked::after {
 .text {
   font-size: 24px;
   font-weight: 500;
+  color: #144072;
 }
 
 .number {
@@ -1461,6 +1487,7 @@ input[type="checkbox"]:checked::after {
 .icon {
   width: 24px;
   height: 24px;
+  color: #144072;
 }
 
 .hidden-box {
@@ -1484,7 +1511,7 @@ input[type="checkbox"]:checked::after {
 .open .number,
 .open .text,
 .open .icon {
-  color: #cd5532;
+  color: #144072;
 }
 
 /* CONTACT US PAGE */
