@@ -982,7 +982,8 @@ header {
 }
 
 .slide {
-  width: 400px;
+  /* width: 400px; */
+  width: 25rem;
   flex: 0 0 auto;
   padding: 2rem 2rem 1rem;
   background-color: #f8f8f8;
