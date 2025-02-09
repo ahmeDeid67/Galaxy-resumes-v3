@@ -110,10 +110,16 @@ header {
   font-size: 1.7rem;
 }
 
+.header .contact {
+  text-align: center;
+}
+
 .header .contact a {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   text-decoration: underline;
   color: #000;
+  font-weight: bold;
+  color: #144072;
 }
 
 /* MENU */
@@ -707,6 +713,17 @@ header {
   color: #525252;
   font-weight: bold;
   text-align: center;
+}
+
+.sample--text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.fa-heart:before {
+  content: "\f004";
+  color: #f00;
 }
 
 .modal {
@@ -1434,6 +1451,7 @@ input[type="checkbox"]:checked::after {
 .other-services .services .service h3 {
   font-size: 1.4rem;
   color: #144072;
+  margin-bottom: 1rem;
 }
 
 .other-services .services .service .price {

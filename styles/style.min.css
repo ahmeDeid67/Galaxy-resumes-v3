@@ -130,10 +130,14 @@ header {
   color: #929292;
   font-size: 1.7rem;
 }
+.header .contact {
+  text-align: center;
+}
 .header .contact a {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   text-decoration: underline;
-  color: #000;
+  color: #144072;
+  font-weight: bold;
 }
 .menu nav {
   transition: 0.3s ease-in-out;
@@ -352,6 +356,16 @@ header {
 }
 .samples-section {
   margin-top: 125px;
+}
+.sample--text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.fa-heart:before {
+  content: "\f004";
+  color: #f00;
 }
 .contact-us h2,
 .pricing h2,
@@ -882,6 +896,7 @@ input[type="checkbox"]:checked::after {
 .other-services .services .service h3 {
   font-size: 1.4rem;
   color: #144072;
+  margin-bottom: 1rem;
 }
 .other-services .services .service .price {
   color: #525252;
