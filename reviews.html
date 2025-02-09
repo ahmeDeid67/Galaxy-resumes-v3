@@ -714,7 +714,7 @@
         function showSlide(slideIndex) {
           slides.forEach((slide, index) => {
             slide.style.transition = "transform 0.5s linear"; // Smooth transition
-            slide.style.transform = `translateX(-${100 * slideIndex}%)`;
+            slide.style.transform = `translateX(-${100 * slideIndex + 10}%)`;
           });
 
           dots.forEach((dot, index) => {
