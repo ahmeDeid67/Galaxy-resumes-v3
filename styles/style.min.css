@@ -11,6 +11,9 @@ img {
   text-align: center;
   font-family: Jost, sans-serif;
 }
+.why__galaxy h2 {
+  font-size: 2.5rem;
+}
 .container,
 .counter,
 body {
@@ -1363,6 +1366,9 @@ footer ul li:first-child {
   .header .contact a,
   .hidden-box p {
     font-size: 0.8rem;
+  }
+  .header .contact a {
+    font-size: 1.2rem;
   }
   .blogs .container > h2,
   .why-galaxy h2 {

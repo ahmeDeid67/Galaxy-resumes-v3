@@ -619,6 +619,82 @@
         setTimeout(animateChevron, 2000); // Adjust the interval time as needed
       })();
 
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   let currentSlide = 0;
+      //   const slides = document.querySelectorAll(".slide");
+      //   const dots = document.querySelectorAll(".dot");
+      //   const leftArrow = document.querySelector(".chevron-review-left");
+      //   const rightArrow = document.querySelector(".chevron-review-right");
+      //   const sliderContainer = document.querySelector(".slider-container");
+      //   let intervalId; // Declare interval globally
+
+      //   if (!slides.length || !leftArrow || !rightArrow) {
+      //     console.error(
+      //       "Error: Missing elements! Check your HTML class names."
+      //     );
+      //     return;
+      //   }
+
+      //   function showSlide(slideIndex) {
+      //     slides.forEach((slide, index) => {
+      //       slide.style.transition = "transform 0.5s ease-in-out"; // Smooth transition
+      //       slide.style.transform = `translateX(-${100 * slideIndex}%)`;
+      //     });
+
+      //     dots.forEach((dot, index) => {
+      //       dot.classList.toggle("active", index === slideIndex);
+      //     });
+      //   }
+
+      //   function nextSlide() {
+      //     currentSlide = (currentSlide + 1) % slides.length;
+      //     showSlide(currentSlide);
+      //   }
+
+      //   function prevSlide() {
+      //     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      //     showSlide(currentSlide);
+      //   }
+
+      //   function startAutoSlide() {
+      //     clearInterval(intervalId); // Reset interval before starting a new one
+      //     intervalId = setInterval(nextSlide, 3000);
+      //   }
+
+      //   function stopAutoSlide() {
+      //     clearInterval(intervalId);
+      //   }
+
+      //   // Restart auto-slide on manual click
+      //   leftArrow.addEventListener("click", () => {
+      //     prevSlide();
+      //     startAutoSlide(); // Reset auto-slide timer
+      //   });
+
+      //   rightArrow.addEventListener("click", () => {
+      //     nextSlide();
+      //     startAutoSlide(); // Reset auto-slide timer
+      //   });
+
+      //   if (sliderContainer) {
+      //     sliderContainer.addEventListener("mouseenter", stopAutoSlide);
+      //     sliderContainer.addEventListener("mouseleave", startAutoSlide);
+      //   }
+
+      //   // Event listeners for pagination dots
+      //   dots.forEach((dot, index) => {
+      //     dot.addEventListener("click", () => {
+      //       currentSlide = index;
+      //       showSlide(currentSlide);
+      //       startAutoSlide(); // Reset auto-slide timer
+      //     });
+      //   });
+
+      //   // Start automatic sliding
+      //   startAutoSlide();
+      //   showSlide(currentSlide); // Ensure first slide is visible
+      // });
+
       document.addEventListener("DOMContentLoaded", function () {
         let currentSlide = 0;
         const slides = document.querySelectorAll(".slide");
@@ -626,7 +702,7 @@
         const leftArrow = document.querySelector(".chevron-review-left");
         const rightArrow = document.querySelector(".chevron-review-right");
         const sliderContainer = document.querySelector(".slider-container");
-        let intervalId; // Declare interval globally
+        let intervalId;
 
         if (!slides.length || !leftArrow || !rightArrow) {
           console.error(
@@ -637,7 +713,7 @@
 
         function showSlide(slideIndex) {
           slides.forEach((slide, index) => {
-            slide.style.transition = "transform 0.5s ease-in-out"; // Smooth transition
+            slide.style.transition = "transform 0.5s linear"; // Smooth transition
             slide.style.transform = `translateX(-${100 * slideIndex}%)`;
           });
 
@@ -657,42 +733,25 @@
         }
 
         function startAutoSlide() {
-          clearInterval(intervalId); // Reset interval before starting a new one
+          clearInterval(intervalId); // Prevent multiple intervals
           intervalId = setInterval(nextSlide, 3000);
         }
 
-        function stopAutoSlide() {
-          clearInterval(intervalId);
-        }
+        // Arrow click listeners (without stopping auto-slide)
+        leftArrow.addEventListener("click", prevSlide);
+        rightArrow.addEventListener("click", nextSlide);
 
-        // Restart auto-slide on manual click
-        leftArrow.addEventListener("click", () => {
-          prevSlide();
-          startAutoSlide(); // Reset auto-slide timer
-        });
-
-        rightArrow.addEventListener("click", () => {
-          nextSlide();
-          startAutoSlide(); // Reset auto-slide timer
-        });
-
-        if (sliderContainer) {
-          sliderContainer.addEventListener("mouseenter", stopAutoSlide);
-          sliderContainer.addEventListener("mouseleave", startAutoSlide);
-        }
-
-        // Event listeners for pagination dots
+        // Pagination dots
         dots.forEach((dot, index) => {
           dot.addEventListener("click", () => {
             currentSlide = index;
             showSlide(currentSlide);
-            startAutoSlide(); // Reset auto-slide timer
           });
         });
 
-        // Start automatic sliding
+        // Start auto sliding
         startAutoSlide();
-        showSlide(currentSlide); // Ensure first slide is visible
+        showSlide(currentSlide);
       });
 
       const copy = document.querySelector(".slider--container").cloneNode(true);
