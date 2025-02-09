@@ -364,11 +364,17 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+}
+.sample--text span {
+  display: flex;
+  align-items: center;
   gap: 0.2rem;
+  color: #aaa;
 }
 .fa-heart:before {
   content: "\f004";
-  color: gray;
+  color: #aaa;
 }
 .contact-us h2,
 .pricing h2,

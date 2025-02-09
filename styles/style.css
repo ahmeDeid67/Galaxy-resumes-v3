@@ -719,13 +719,18 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.2rem;
+  gap: 1rem;
 }
 .fa-heart:before {
   content: "\f004";
-  color: gray;
+  color: #aaa;
 }
-
+.sample--text span {
+  display: flex;
+  color: #aaa;
+  align-items: center;
+  gap: 0.2rem;
+}
 .modal {
   display: none;
   position: fixed;
