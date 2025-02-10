@@ -552,8 +552,6 @@ header {
   font-size: 1.5rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  position: relative;
-  z-index: 150;
 }
 
 .arrows i:hover {
@@ -565,41 +563,6 @@ header {
   padding-block: 1rem;
   animation: 150s linear infinite slide;
 }
-.slider {
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-}
-
-.slider--container {
-  display: flex;
-  width: max-content;
-  animation: slide 50s linear infinite;
-}
-
-@keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.slide {
-  width: 300px; /* Adjust as needed */
-  flex-shrink: 0;
-  margin: 10px;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-.duplicate {
-  display: flex;
-}
-
 .slide {
   /* width: 400px; */
   width: 25rem;
