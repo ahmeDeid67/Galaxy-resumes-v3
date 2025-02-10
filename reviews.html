@@ -509,253 +509,59 @@
     <div id="footer-placeholder"></div>
 
     <script>
-      let currentIndex = 0;
+      // document.addEventListener("DOMContentLoaded", () => {
+      //   const sliderContainer = document.querySelector(".slider--container");
+      //   const slides = Array.from(sliderContainer.children);
 
-      function moveCarousel(direction) {
-        const samples = document.querySelectorAll(".samples-container .sample");
-
-        const totalSamples = samples.length;
-
-        // Hide the current active sample
-        samples[currentIndex].classList.remove("active");
-
-        // Update the current index based on direction
-        currentIndex += direction;
-
-        // Wrap around if out of bounds
-        if (currentIndex < 0) {
-          currentIndex = totalSamples - 1;
-        } else if (currentIndex >= totalSamples) {
-          currentIndex = 0;
-        }
-
-        // Show the new active sample
-        samples[currentIndex].classList.add("active");
-      }
-
-      // Initialize the first sample as active
-      document.addEventListener("DOMContentLoaded", () => {
-        const samples = document.querySelectorAll(".samples-container .sample");
-        if (samples.length > 0) {
-          samples[0].classList.add("active");
-        }
-      });
-
-      let current = 0;
-      const samplesData = [
-        { src: "./assets/resume-1.jpeg", alt: "Sample 1" },
-        { src: "./assets/resume-2.jpeg", alt: "Sample 2" },
-        { src: "./assets/resume-3.jpeg", alt: "Sample 3" },
-      ];
-
-      function openModal(index) {
-        current = index;
-        const modal = document.getElementById("myModal");
-        const modalImg = document.getElementById("modalImage");
-        // console.log(modalImg.src);
-
-        modal.style.display = "flex";
-        // console.log(samplesData[0].src);
-        modalImg.src = samplesData[current].src;
-        modalImg.alt = samplesData[current].alt;
-      }
-
-      function closeModal() {
-        const modal = document.getElementById("myModal");
-        modal.style.display = "none";
-      }
-
-      function navigateModal(direction) {
-        current += direction;
-
-        // Wrap around if out of bounds
-        if (current < 0) {
-          current = samplesData.length - 1;
-        } else if (current >= samplesData.length) {
-          current = 0;
-        }
-
-        const modalImg = document.getElementById("modalImage");
-
-        modalImg.src = samplesData[current].src;
-        modalImg.alt = samplesData[current].alt;
-      }
-
-      // Close the modal when clicking outside of the image
-      window.onclick = function (event) {
-        const modal = document.getElementById("myModal");
-        if (event.target == modal) {
-          closeModal();
-        }
-      };
-
-      // Initialize the first sample as active
-      document.addEventListener("DOMContentLoaded", () => {
-        const samples = document.querySelectorAll(".samples-container .sample");
-        if (samples.length > 0) {
-          samples[0].classList.add("active");
-        }
-      });
-
-      // Event listener to close modal when clicked outside content
-      window.onclick = function (event) {
-        var modal = document.getElementById("myModal");
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      };
-
-      (function animateChevron() {
-        // Add dim class to both chevron buttons
-        const chevronButtons = document.querySelectorAll(".chevron.mobile");
-        chevronButtons.forEach((button) => button.classList.add("dim"));
-
-        // Remove dim class after a short delay
-        setTimeout(() => {
-          chevronButtons.forEach((button) => button.classList.remove("dim"));
-        }, 1000); // Adjust the delay time as needed
-
-        // Repeat the animation after a short interval
-        setTimeout(animateChevron, 2000); // Adjust the interval time as needed
-      })();
-
-      // document.addEventListener("DOMContentLoaded", function () {
-      //   let currentSlide = 0;
-      //   const slides = document.querySelectorAll(".slide");
-      //   const dots = document.querySelectorAll(".dot");
-      //   const leftArrow = document.querySelector(".chevron-review-left");
-      //   const rightArrow = document.querySelector(".chevron-review-right");
-      //   const sliderContainer = document.querySelector(".slider-container");
-      //   let intervalId; // Declare interval globally
-
-      //   if (!slides.length || !leftArrow || !rightArrow) {
-      //     console.error(
-      //       "Error: Missing elements! Check your HTML class names."
-      //     );
-      //     return;
-      //   }
-
-      //   function showSlide(slideIndex) {
-      //     slides.forEach((slide, index) => {
-      //       slide.style.transition = "transform 0.5s ease-in-out"; // Smooth transition
-      //       slide.style.transform = `translateX(-${100 * slideIndex}%)`;
-      //     });
-
-      //     dots.forEach((dot, index) => {
-      //       dot.classList.toggle("active", index === slideIndex);
-      //     });
-      //   }
-
-      //   function nextSlide() {
-      //     currentSlide = (currentSlide + 1) % slides.length;
-      //     showSlide(currentSlide);
-      //   }
-
-      //   function prevSlide() {
-      //     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-      //     showSlide(currentSlide);
-      //   }
-
-      //   function startAutoSlide() {
-      //     clearInterval(intervalId); // Reset interval before starting a new one
-      //     intervalId = setInterval(nextSlide, 3000);
-      //   }
-
-      //   function stopAutoSlide() {
-      //     clearInterval(intervalId);
-      //   }
-
-      //   // Restart auto-slide on manual click
-      //   leftArrow.addEventListener("click", () => {
-      //     prevSlide();
-      //     startAutoSlide(); // Reset auto-slide timer
+      //   // Duplicate slides to create an infinite effect
+      //   slides.forEach((slide) => {
+      //     const clone = slide.cloneNode(true);
+      //     sliderContainer.appendChild(clone);
       //   });
-
-      //   rightArrow.addEventListener("click", () => {
-      //     nextSlide();
-      //     startAutoSlide(); // Reset auto-slide timer
-      //   });
-
-      //   if (sliderContainer) {
-      //     sliderContainer.addEventListener("mouseenter", stopAutoSlide);
-      //     sliderContainer.addEventListener("mouseleave", startAutoSlide);
-      //   }
-
-      //   // Event listeners for pagination dots
-      //   dots.forEach((dot, index) => {
-      //     dot.addEventListener("click", () => {
-      //       currentSlide = index;
-      //       showSlide(currentSlide);
-      //       startAutoSlide(); // Reset auto-slide timer
-      //     });
-      //   });
-
-      //   // Start automatic sliding
-      //   startAutoSlide();
-      //   showSlide(currentSlide); // Ensure first slide is visible
       // });
 
-      document.addEventListener("DOMContentLoaded", function () {
-        let currentSlide = 0;
+      document.addEventListener("DOMContentLoaded", () => {
+        const sliderContainer = document.querySelector(".slider--container");
         const slides = document.querySelectorAll(".slide");
-        const dots = document.querySelectorAll(".dot");
         const leftArrow = document.querySelector(".chevron-review-left");
         const rightArrow = document.querySelector(".chevron-review-right");
-        const sliderContainer = document.querySelector(".slider-container");
-        let intervalId;
 
-        if (!slides.length || !leftArrow || !rightArrow) {
-          console.error(
-            "Error: Missing elements! Check your HTML class names."
-          );
-          return;
+        let currentIndex = 0;
+        const slideWidth = slides[0].offsetWidth + 20; // Include margin
+
+        function moveSlide(direction) {
+          if (direction === "next") {
+            currentIndex++;
+            if (currentIndex >= slides.length) {
+              currentIndex = 0; // Reset to start
+            }
+          } else if (direction === "prev") {
+            currentIndex--;
+            if (currentIndex < 0) {
+              currentIndex = slides.length - 1; // Go to last slide
+            }
+          }
+
+          sliderContainer.style.transform = `translateX(${
+            -currentIndex * slideWidth
+          }px)`;
         }
 
-        function showSlide(slideIndex) {
-          slides.forEach((slide, index) => {
-            slide.style.transition = "transform 0.5s linear"; // Smooth transition
-            slide.style.transform = `translateX(-${100 * slideIndex + 10}%)`;
-          });
+        rightArrow.addEventListener("click", () => moveSlide("next"));
+        leftArrow.addEventListener("click", () => moveSlide("prev"));
 
-          dots.forEach((dot, index) => {
-            dot.classList.toggle("active", index === slideIndex);
-          });
+        // Auto-scroll every 5 seconds
+        let autoScroll = setInterval(() => moveSlide("next"), 5000);
+
+        // Pause auto-scroll when clicking arrows
+        function resetAutoScroll() {
+          clearInterval(autoScroll);
+          autoScroll = setInterval(() => moveSlide("next"), 5000);
         }
 
-        function nextSlide() {
-          currentSlide = (currentSlide + 1) % slides.length;
-          showSlide(currentSlide);
-        }
-
-        function prevSlide() {
-          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-          showSlide(currentSlide);
-        }
-
-        function startAutoSlide() {
-          clearInterval(intervalId); // Prevent multiple intervals
-          intervalId = setInterval(nextSlide, 5000);
-        }
-
-        // Arrow click listeners (without stopping auto-slide)
-        leftArrow.addEventListener("click", prevSlide);
-        rightArrow.addEventListener("click", nextSlide);
-
-        // Pagination dots
-        dots.forEach((dot, index) => {
-          dot.addEventListener("click", () => {
-            currentSlide = index;
-            showSlide(currentSlide);
-          });
-        });
-
-        // Start auto sliding
-        startAutoSlide();
-        showSlide(currentSlide);
+        leftArrow.addEventListener("click", resetAutoScroll);
+        rightArrow.addEventListener("click", resetAutoScroll);
       });
-
-      const copy = document.querySelector(".slider--container").cloneNode(true);
-      document.querySelector(".slider").appendChild(copy);
     </script>
   </body>
 </html>
