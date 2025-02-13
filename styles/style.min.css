@@ -1321,6 +1321,7 @@ footer ul li:first-child {
   }
   .showcase .container {
     background-position: left;
+    background-image: url(../assets/banner-mobile.jpeg);
   }
 }
 @media (max-width: 770px) {
