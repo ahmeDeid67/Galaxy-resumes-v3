@@ -12,7 +12,7 @@ img {
   font-family: Jost, sans-serif;
 }
 .why__galaxy h2 {
-  font-size: 2.5rem;
+  font-size: 2.1rem;
 }
 .container,
 .counter,
@@ -173,7 +173,7 @@ header {
   font-weight: 700;
 }
 .why__galaxy h2 {
-  color: #144072;
+  color: #cd5532;
   margin-bottom: 2rem;
 }
 .why__galaxy--items {
@@ -202,7 +202,7 @@ header {
 }
 .instructions h4,
 .why__galaxy--item h3 {
-  color: #cd5532;
+  color: #144072;
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
@@ -500,20 +500,20 @@ header {
 .reviews {
   padding-bottom: 3rem;
 }
-@keyframes slide {
+/* @keyframes slide {
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(-100%);
   }
-}
+} */
 .slider {
   overflow: hidden;
   display: flex;
   gap: 1rem;
 }
-.slider::after,
+/* .slider::after,
 .slider::before {
   content: "";
   position: absolute;
@@ -532,8 +532,8 @@ header {
 }
 .slider:hover .slider--container {
   animation-play-state: paused;
-}
-.arrows {
+} */
+/* .arrows {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -556,25 +556,23 @@ header {
 
 .arrows i:hover {
   font-size: 2rem;
-}
+} */
 .slider--container {
-  display: flex;
-  gap: 1rem;
   padding-block: 1rem;
   animation: 150s linear infinite slide;
 }
 .slide {
-  /* width: 400px; */
-  width: 25rem;
-  flex: 0 0 auto;
+  width: 100%;
+  /* flex: 0 0 auto; */
   padding: 2rem 2rem 1rem;
   background-color: #f8f8f8;
   border-radius: 10px;
   border: 2px solid #ccc;
+  margin-bottom: 1rem;
 }
-.slide:hover {
+/* .slide:hover {
   transform: scale(1.1);
-}
+} */
 .review--container {
   display: flex;
   align-items: center;
