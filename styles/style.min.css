@@ -153,9 +153,9 @@ header {
 }
 .showcase .container {
   position: relative;
-  height: 241px;
+  height: 400px;
   width: 100%;
-  background-image: url("../assets/basketpng.png");
+  background-image: url("../assets/banner.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
