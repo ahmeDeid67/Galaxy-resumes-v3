@@ -1319,6 +1319,9 @@ footer ul li:first-child {
     margin-right: 0.6rem;
     padding-right: 0.6rem;
   }
+  .showcase .container {
+    background-position: left;
+  }
 }
 @media (max-width: 770px) {
   .why-galaxy .features .feature {
