@@ -702,7 +702,7 @@ input[type="checkbox"]:checked::after {
   margin-left: 5px;
 }
 .experience label {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   cursor: pointer;
   color: #144072;
 }
