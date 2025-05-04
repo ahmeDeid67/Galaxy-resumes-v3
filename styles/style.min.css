@@ -767,6 +767,10 @@ input[type="checkbox"]:checked::after {
   width: 60px;
   height: auto;
 }
+.valid-globally {
+  font-style: italic;
+  font-size: 1rem;
+}
 .pricing-invoice {
   margin-top: 140px;
 }
@@ -1421,7 +1425,12 @@ footer ul li:first-child {
     width: 100%;
   }
   .pricing .experience {
-    padding-inline: 1rem;
+    padding-inline: 0rem;
+    width: 400px;
+    max-width: 100%;
+  }
+  .pricing .container {
+    padding: 0.5rem 0.2rem;
   }
   .experience {
     padding-bottom: 0;
@@ -1557,4 +1566,19 @@ footer ul li:first-child {
 .disabled {
   pointer-events: none;
   opacity: 0.5; /* Optional: makes it look inactive */
+}
+@media (max-width: 410px) {
+  .menu {
+    width: 30%;
+  }
+
+  .menu .menu-oc {
+    width: initial;
+  }
+
+  .experience label,
+  .header .contact a,
+  .hidden-box p {
+    font-size: 0.7rem;
+  }
 }
