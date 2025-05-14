@@ -5,6 +5,9 @@ header,
 img {
   width: 100%;
 }
+header {
+  background-color: #fff;
+}
 .showcase h1,
 .why__galaxy h2 {
   font-size: 1.5rem;
@@ -93,9 +96,11 @@ header {
 }
 .addresses h3,
 .blog h2,
-.blog ol,
-.get-text span {
+.blog ol {
   margin-top: 2rem;
+}
+.get-text span {
+  margin-top: 2rem 4rem;
 }
 .header .contact .icons {
   display: flex;
@@ -888,7 +893,7 @@ input[type="checkbox"]:checked::after {
   text-align: center;
   color: #cd5532;
   font-size: 2rem;
-  margin-block: 2rem 4rem;
+  margin-block: 1rem;
 }
 .other-services .services {
   display: grid;
@@ -1122,7 +1127,7 @@ footer ul li:first-child {
   margin-top: 160px;
 }
 .terms .content {
-  padding: 1rem;
+  padding: 3rem 1rem;
 }
 .terms .content .head-text {
   font-size: 0.75rem;
@@ -1190,7 +1195,7 @@ footer ul li:first-child {
     transition: transform 0.5s ease-in-out;
   }
   .samples-section h2 {
-    margin-block: 1rem 0;
+    margin-block: 3rem 0;
   }
   .sample {
     min-width: 100%;
@@ -1424,7 +1429,7 @@ footer ul li:first-child {
   .contact-us,
   .other-services,
   .pricing {
-    margin-top: 165px;
+    margin-top: 230px;
   }
   .pricing h2 {
     margin-block: 1rem 0;
@@ -1512,7 +1517,7 @@ footer ul li:first-child {
     margin-top: 1rem;
   }
   .menu .nav-menu {
-    top: 174px;
+    top: 230px;
   }
   .experience {
     margin-block: 0.5rem 2rem;
@@ -1589,4 +1594,28 @@ footer ul li:first-child {
   .hidden-box p {
     font-size: 0.9rem;
   }
+}
+.swiper {
+  width: 70%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 500px !important;
+  height: 650px !important;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: #000;
+  font-weight: bold;
 }
