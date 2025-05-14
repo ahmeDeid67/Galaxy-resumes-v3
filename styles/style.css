@@ -135,7 +135,7 @@ header {
 
 /* HOME PAGE */
 .showcase {
-  margin-top: 135px;
+  margin-top: 170px;
 }
 
 /* .showcase .container {
@@ -195,10 +195,10 @@ header {
 
 .showcase .container {
   position: relative;
-  height: 241px;
+  height: 300px;
   width: 100%;
-  background-image: url("../assets/basketpng.png");
-  background-position: center;
+  background-image: url("../assets/banner2.png");
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -1902,7 +1902,7 @@ footer ul li:first-child {
   }
 
   .experience label {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .experience {

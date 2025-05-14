@@ -147,16 +147,18 @@ header {
 }
 .contact-us,
 .other-services,
-.pricing,
-.showcase {
+.pricing {
   margin-top: 135px;
+}
+.showcase {
+  margin-top: 170px;
 }
 .showcase .container {
   position: relative;
-  height: 400px;
+  height: 300px;
   width: 100%;
-  background-image: url("../assets/banner.jpeg");
-  background-position: center;
+  background-image: url("../assets/banner2.png");
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -1323,10 +1325,6 @@ footer ul li:first-child {
     margin-right: 0.6rem;
     padding-right: 0.6rem;
   }
-  .showcase .container {
-    background-position: left;
-    background-image: url(../assets/banner-mobile.jpeg);
-  }
 }
 @media (max-width: 770px) {
   .why-galaxy .features .feature {
@@ -1375,10 +1373,12 @@ footer ul li:first-child {
   .header .contact .contact-text {
     font-size: 0.7rem;
   }
-  .experience label,
   .header .contact a,
   .hidden-box p {
     font-size: 0.8rem;
+  }
+  .experience label {
+    font-size: 1rem;
   }
   .header .contact a {
     font-size: 1.2rem;
