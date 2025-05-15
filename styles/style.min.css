@@ -163,9 +163,9 @@ header {
   position: relative;
   height: 500px;
   max-width: 100%;
-  background-image: url("../assets/banner4.png");
+  background-image: url("../assets/banner5.png");
   background-position: top;
-  background-size: cover;
+  /* background-size: cover; */
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
