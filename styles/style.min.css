@@ -1420,7 +1420,8 @@ footer ul li:first-child {
   }
   .showcase .container {
     padding-top: 2.5rem;
-    height: 175px;
+    height: 200px;
+    background-position: 70%;
   }
   .why-galaxy .features-right {
     display: grid;
@@ -1487,7 +1488,7 @@ footer ul li:first-child {
     font-size: 1.1rem;
   }
   .contact-us .contacts {
-    gap: 2rem;
+    gap: 1rem;
   }
   .blog h2 {
     font-size: 1.4rem;
@@ -1635,7 +1636,7 @@ footer ul li:first-child {
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
-  color: #000;
+  color: #cd5532;
   font-weight: bold;
 }
 
