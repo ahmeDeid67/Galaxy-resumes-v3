@@ -1430,9 +1430,9 @@ footer ul li:first-child {
     margin-top: 235px;
   }
   .showcase .container {
+    background-image: url("../assets/banner-mobile.png");
     padding-top: 2.5rem;
     height: 200px;
-    background-position: 60%;
   }
   .why-galaxy .features-right {
     display: grid;
