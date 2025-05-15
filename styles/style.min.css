@@ -1644,14 +1644,14 @@ footer ul li:first-child {
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 100% !important;
-  height: 500px !important;
+  width: 80% !important;
+  height: 450px !important;
 }
 
 .swiper-slide img {
   display: block;
   width: 100%;
-  height: 500px;
+  height: 450px;
 }
 
 .swiper-button-next:after,
