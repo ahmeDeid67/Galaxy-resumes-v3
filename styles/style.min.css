@@ -1644,14 +1644,14 @@ footer ul li:first-child {
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 80% !important;
-  height: 450px !important;
+  width: 500px !important;
+  height: 650px !important;
 }
 
 .swiper-slide img {
   display: block;
   width: 100%;
-  height: 450px;
+  height: 100%;
 }
 
 .swiper-button-next:after,
@@ -1663,5 +1663,20 @@ footer ul li:first-child {
 @media (max-width: 565px) {
   .swiper {
     width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 80% !important;
+    height: 450px !important;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 450px;
   }
 }
