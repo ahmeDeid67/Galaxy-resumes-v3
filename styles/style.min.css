@@ -161,11 +161,11 @@ header {
 }
 .showcase .container {
   position: relative;
-  height: 500px;
+  height: 775px;
   max-width: 100%;
   background-image: url("../assets/banner5.png");
   background-position: top;
-  /* background-size: cover; */
+  background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -1410,7 +1410,6 @@ footer ul li:first-child {
   .showcase .container {
     padding-top: 2.5rem;
     height: 200px;
-    background-size: cover;
   }
   .why-galaxy .features-right {
     display: grid;
