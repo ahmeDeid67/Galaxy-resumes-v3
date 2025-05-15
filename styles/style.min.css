@@ -1083,6 +1083,9 @@ input[type="checkbox"]:checked::after {
   margin-bottom: 2rem;
   color: #7a7a7a;
 }
+footer {
+  background-color: #000;
+}
 footer .container {
   background-color: #000;
   display: flex;
