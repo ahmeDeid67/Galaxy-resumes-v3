@@ -1410,6 +1410,7 @@ footer ul li:first-child {
   .showcase .container {
     padding-top: 2.5rem;
     height: 200px;
+    background-size: cover;
   }
   .why-galaxy .features-right {
     display: grid;
