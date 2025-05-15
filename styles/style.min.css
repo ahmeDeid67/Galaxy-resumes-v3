@@ -393,11 +393,12 @@ header {
   margin-block: 2rem 1rem;
   font-family: Jost, sans-serif;
 }
-.contact-row {
+/* .contact-row {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-}
+} */
 .samples-section .samples {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -990,7 +991,7 @@ input[type="checkbox"]:checked::after {
   color: #cd5532;
 }
 .contact-us .container {
-  padding-bottom: 4rem;
+  /* padding-bottom: 4rem; */
   /* border-bottom: 1px solid #929292; */
 }
 .get-in-touch {
@@ -1018,6 +1019,13 @@ input[type="checkbox"]:checked::after {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  border-bottom: 1px solid #929292;
+  padding-bottom: 4rem;
+}
+.contact-container-column .contacts {
+  display: flex;
+  gap: 10rem;
+  flex-wrap: wrap;
 }
 .contact-container p {
   /* text-align: center; */
@@ -1072,7 +1080,7 @@ input[type="checkbox"]:checked::after {
   text-wrap: nowrap;
 }
 .addresses {
-  /* text-align: center; */
+  text-align: center;
   font-size: 1rem;
 }
 .addresses h3 {
