@@ -1644,7 +1644,7 @@ footer ul li:first-child {
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 500px !important;
+  width: 100% !important;
   height: 425px !important;
 }
 
