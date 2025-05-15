@@ -161,11 +161,11 @@ header {
 }
 .showcase .container {
   position: relative;
-  height: 450px;
+  height: 500px;
   max-width: 100%;
-  background-image: url("../assets/banner2.png");
-  background-position: top;
-  background-size: cover;
+  background-image: url("../assets/banner3.png");
+  background-position: center;
+  /* background-size: cover; */
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -392,6 +392,11 @@ header {
   font-size: 2rem;
   margin-block: 2rem 1rem;
   font-family: Jost, sans-serif;
+}
+.contact-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .samples-section .samples {
   display: grid;
@@ -986,7 +991,7 @@ input[type="checkbox"]:checked::after {
 }
 .contact-us .container {
   padding-bottom: 4rem;
-  border-bottom: 1px solid #929292;
+  /* border-bottom: 1px solid #929292; */
 }
 .get-in-touch {
   color: #cd5532;
@@ -1008,14 +1013,14 @@ input[type="checkbox"]:checked::after {
   font-size: 1rem;
   font-weight: 700;
 }
-.contact-container {
+.contact-container-column {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
 }
 .contact-container p {
-  text-align: center;
+  /* text-align: center; */
   color: #144072;
   font-size: 1.2rem;
   font-weight: 700;
@@ -1067,7 +1072,7 @@ input[type="checkbox"]:checked::after {
   text-wrap: nowrap;
 }
 .addresses {
-  text-align: center;
+  /* text-align: center; */
   font-size: 1rem;
 }
 .addresses h3 {
@@ -1075,7 +1080,7 @@ input[type="checkbox"]:checked::after {
   margin-bottom: 1.3rem;
 }
 .addresses p {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: #7a7a7a;
 }
 footer .container {
