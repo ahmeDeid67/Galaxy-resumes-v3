@@ -1088,7 +1088,7 @@ input[type="checkbox"]:checked::after {
   margin-bottom: 1.3rem;
 }
 .addresses p {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #7a7a7a;
 }
 footer {
@@ -1416,7 +1416,7 @@ footer ul li:first-child {
     font-size: 1.5rem;
   }
   .showcase {
-    margin-top: 235px;
+    margin-top: 250px;
   }
   .showcase .container {
     padding-top: 2.5rem;
@@ -1499,6 +1499,9 @@ footer ul li:first-child {
   .contact-footer:last-of-type {
     right: 10px;
     background-color: #2eb841;
+  }
+  .invoice {
+    padding-block: 50px 16px;
   }
   .invoice-title {
     font-size: 24px;
@@ -1634,4 +1637,10 @@ footer ul li:first-child {
 .swiper-button-prev:after {
   color: #000;
   font-weight: bold;
+}
+
+@media (max-width: 565px) {
+  .swiper {
+    width: 100%;
+  }
 }
