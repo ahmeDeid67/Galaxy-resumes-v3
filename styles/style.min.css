@@ -424,6 +424,7 @@ header {
 }
 .pricing-lower img {
   max-width: 750px;
+  margin-inline: auto;
 }
 .samples-section .samples img {
   width: 200px;
@@ -650,11 +651,11 @@ header {
   font-weight: 700;
 }
 .pricing .container #experience option:not(:first-child) {
-  font-weight: 700;
+  /* font-weight: 700; */
   color: #cd5532;
 }
 .pricing .container #experience option {
-  font-weight: 700;
+  /* font-weight: 700; */
 }
 .experience {
   margin-block: 2rem;
@@ -734,6 +735,7 @@ input[type="checkbox"]:checked::after {
   margin-top: 2rem;
   width: fit-content;
   margin-inline: auto;
+  margin-bottom: -0.5rem;
 }
 .experience .proceed {
   background-color: #cd5532;
@@ -746,6 +748,7 @@ input[type="checkbox"]:checked::after {
   transition: background-color 0.3s;
   color: #fff;
   border: none;
+  margin-top: 1rem;
 }
 .pricing--contact {
   font-weight: 700;
