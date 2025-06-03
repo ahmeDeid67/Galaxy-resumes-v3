@@ -161,24 +161,30 @@ header {
 }
 .showcase .container {
   position: relative;
-  height: 600px;
+  /* height: 600px; */
   max-width: 100%;
-  background-image: url("../assets/banner8.png");
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* background-image: url("../assets/zip2.png"); */
+  /* background-position: top; */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 0;
+  justify-content: center;
+  padding: 1rem 0 0;
+}
+.showcase .container img {
+  max-width: 20%;
 }
 .showcase h1 {
-  position: absolute;
+  /* position: absolute;
   bottom: 30px;
-  left: 20px;
-  color: #fff;
-  width: 50%;
+  left: 20px; */
+  color: #144072;
+  text-align: left;
+  font-size: 4rem;
+  width: 35%;
   font-weight: 700;
+  padding-left: 4rem;
 }
 .why__galaxy h2 {
   color: #cd5532;
@@ -1434,9 +1440,17 @@ footer ul li:first-child {
     margin-top: 235px;
   }
   .showcase .container {
-    background-image: url("../assets/banner-mobile.png");
+    /* background-image: url("../assets/banner-mobile.png"); */
     padding-top: 2.5rem;
     height: 200px;
+  }
+  .showcase .container img {
+    align-self: flex-end;
+    max-width: 25%;
+  }
+  .showcase .container h1 {
+    width: 50%;
+    font-size: 1.2rem;
   }
   .why-galaxy .features-right {
     display: grid;
