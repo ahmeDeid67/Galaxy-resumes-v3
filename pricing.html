@@ -44,10 +44,11 @@
 
         <select name="experience" id="experience">
           <option selected value="">Select Experience</option>
-          <option value="fresher">Fresher</option>
-          <option value="experienced">Experienced</option>
-          <option value="managerial">Managerial</option>
-          <option value="leadership">Leadership</option>
+          <option value="fresher" id="fresher">Fresher</option>
+          <option value="experienced" id="experienced">Experienced</option>
+          <option value="managerial" id="managerial">Managerial</option>
+          <option value="leadership" id="leadership">Leadership</option>
+          <option value="suite" id="suite">C-Suite</option>
         </select>
 
         <div class="fresher experience hidden">
@@ -694,6 +695,121 @@
           </form>
         </div>
 
+        <div class="suite experience hidden">
+          <form action="">
+            <div>
+              <input
+                type="checkbox"
+                name="price"
+                id="a4"
+                data-name="Indian Resume"
+                data-price="9800"
+              />
+              <label for="a4">C-Suite Resume <span>@Rs. 9800</span></label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="price"
+                id="b4"
+                data-name="Executive Biography"
+                data-price="3000"
+              />
+              <label for="b4"
+                ><span>Executive Biography</span> <span>@Rs. 3000</span></label
+              >
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="price"
+                id="c4"
+                data-name="LinkedIn Profile Makeover"
+                data-price="8000"
+              />
+              <label for="c4"
+                ><span>Linkedin Profile Makeover</span>
+                <span>@Rs. 8000</span></label
+              >
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="price"
+                id="d4"
+                data-name="Profile Updation"
+                data-price="4000"
+              />
+              <label for="d4"
+                ><span>Profiling - Naukri etc. (per site)</span>
+                <span>@Rs. 4000</span></label
+              >
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="price"
+                id="e4"
+                data-name="Email Body Content"
+                data-price="200"
+              />
+              <label for="e4"
+                ><span>Email Body Content</span> <span>@Rs. 200</span></label
+              >
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="price"
+                id="f4"
+                data-name="Winning Interviews"
+                data-price="1000"
+              />
+              <label for="f4"
+                ><span>Winning Interviews (E-Book PDF)</span>
+                <span>@Rs. 1000</span></label
+              >
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="price"
+                id="g4"
+                data-name="Priority Delivery"
+                data-price="3000"
+              />
+              <label for="g4"
+                >Priority Delivery
+                <span style="font-style: italic">(48 hrs)</span>
+                <span>@Rs. 3000</span></label
+              >
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="price"
+                id="h4"
+                data-name="Urgent Delivery"
+                data-name="Urgent Delivery"
+                data-price="4000"
+              />
+              <label for="h4"
+                >Urgent Delivery
+                <span style="font-style: italic">(24 hrs)</span>
+                <span>@Rs. 4000</span></label
+              >
+            </div>
+
+            <div class="total leadership">
+              Total
+              <span class="pricing-color">Rs. 0</span>
+            </div>
+            <span class="valid-globally">Our Resumes are valid globally!!</span
+            ><br />
+            <a href="invoice.html" class="proceed">Proceed for Payment</a>
+          </form>
+        </div>
+
         <div class="pricing-lower">
           <img
             src="./assets/resume-concept-man-makes-resume-vector-illustration-flat_186332-1030-transformed.jpeg"
@@ -711,180 +827,12 @@
     <div id="footer-placeholder"></div>
 
     <script>
-      // document.addEventListener("DOMContentLoaded", function () {
-      //   const selectElement = document.getElementById("experience");
-      //   const sections = document.querySelectorAll(".experience");
-      //   const totalPriceSpans = document.querySelectorAll(".total span");
-      //   const originalBorderColor = selectElement.style.borderColor;
-      //   const resumeImage = document.getElementById("resumeImage");
-      //   const resumeText = document.querySelector(".pricing-lower-text");
-      //   const proceedBtns = document.querySelectorAll(".proceed");
-
-      //   selectElement.addEventListener("change", () => {
-      //     selectElement.style.border = "1px solid #f00";
-      //   });
-
-      //   selectElement.addEventListener("blur", function () {
-      //     this.style.borderColor = originalBorderColor;
-      //   });
-
-      //   // Function to hide all sections except the selected one
-      //   function showSelectedSection(selectedOption) {
-      //     sections.forEach((section) => {
-      //       const invoiceAddress = section.querySelector(".invoice-payment");
-      //       if (section.classList.contains(selectedOption)) {
-      //         section.classList.remove("hidden");
-      //       } else {
-      //         section.classList.add("hidden");
-      //         if (invoiceAddress) {
-      //           invoiceAddress.style.display = "none";
-      //         }
-      //       }
-      //     });
-      //   }
-
-      //   // Function to update total price
-      //   function updateTotalPrice() {
-      //     sections.forEach((section, index) => {
-      //       const checkboxes = section.querySelectorAll(
-      //         'input[type="checkbox"]:checked'
-      //       );
-      //       const invoiceAddress = section.querySelector(".invoice-payment");
-      //       let currentTotal = 0;
-
-      //       checkboxes.forEach((checkbox) => {
-      //         const price = parseInt(checkbox.getAttribute("data-price"));
-      //         currentTotal += price;
-      //       });
-
-      //       // Display the total price for this section
-      //       totalPriceSpans[index].textContent = `Rs. ${currentTotal}`;
-
-      //       // Check if all checkboxes are unchecked
-      //       // if (
-      //       //   section.querySelectorAll('input[type="checkbox"]:checked')
-      //       //     .length === 0
-      //       // ) {
-      //       //   invoiceAddress.style.display = "none";
-      //       // }
-      //     });
-      //   }
-
-      //   // Function to reset all checkboxes to unchecked
-      //   function resetCheckboxes() {
-      //     sections.forEach((section) => {
-      //       const checkboxes = section.querySelectorAll(
-      //         'input[type="checkbox"]'
-      //       );
-      //       checkboxes.forEach((checkbox) => {
-      //         checkbox.checked = false;
-      //       });
-      //     });
-      //   }
-
-      //   // Add event listener to select element
-      //   selectElement.addEventListener("change", function () {
-      //     // Get the selected option
-      //     const selectedOption = this.value;
-      //     // Reset all checkboxes
-      //     resetCheckboxes();
-      //     // Show the selected section
-      //     showSelectedSection(selectedOption);
-      //     // Update the total price
-      //     updateTotalPrice();
-      //     // Show the image and hide the text if not the default option
-      //     if (selectedOption === "") {
-      //       resumeImage.style.display = "block";
-      //       // resumeText.style.display = "none";
-      //     } else {
-      //       resumeImage.style.display = "none";
-      //       // resumeText.style.display = "block";
-      //     }
-      //   });
-
-      //   // Add event listeners to checkboxes
-      //   sections.forEach((section) => {
-      //     const checkboxes = section.querySelectorAll('input[type="checkbox"]');
-      //     checkboxes.forEach((checkbox) => {
-      //       checkbox.addEventListener("change", function () {
-      //         updateTotalPrice();
-      //       });
-      //     });
-      //   });
-
-      //   // // /////////////////////////////////////////////////
-      //   proceedBtns.forEach((btn) => {
-      //     btn.addEventListener("click", function (e) {
-      //       const selectedPlan = selectElement.value;
-      //       const selectedOptions = [];
-      //       let totalPrice = 0;
-      //       let isAnyCheckboxSelected = false;
-
-      //       sections.forEach((section) => {
-      //         const checkboxes = section.querySelectorAll(
-      //           'input[type="checkbox"]:checked'
-      //         );
-      //         if (checkboxes.length > 0) {
-      //           isAnyCheckboxSelected = true; // Set the flag to true if any checkbox is selected
-      //         }
-      //         checkboxes.forEach((checkbox) => {
-      //           const price = parseInt(checkbox.getAttribute("data-price"));
-      //           totalPrice += price;
-      //           selectedOptions.push({
-      //             name: checkbox.getAttribute("data-name"),
-      //             price: price,
-      //           });
-      //         });
-      //       });
-
-      //       if (!isAnyCheckboxSelected) {
-      //         alert("Please select at least one option before proceeding.");
-      //         e.preventDefault(); // Prevent the default action
-      //         return; // Exit the function if no checkboxes are selected
-      //       }
-
-      //       localStorage.setItem("selectedPlan", selectedPlan);
-      //       localStorage.setItem(
-      //         "selectedOptions",
-      //         JSON.stringify(selectedOptions)
-      //       );
-      //       localStorage.setItem("totalPrice", totalPrice);
-
-      //       console.log(localStorage.getItem("selectedPlan"));
-      //       console.log(localStorage.getItem("selectedOptions"));
-      //       console.log(localStorage.getItem("totalPrice"));
-
-      //       window.location.href = "invoice.html";
-      //     });
-      //   });
-      //   ////////////////////////////////////////////////////
-      //   proceedBtns.forEach((btn) => {
-      //     btn.addEventListener("click", (e) => {
-      //       e.preventDefault();
-      //       const parentSection = btn.closest(".experience");
-      //       const checkboxes = parentSection.querySelectorAll(
-      //         'input[type="checkbox"]:checked'
-      //       );
-      //       if (checkboxes.length === 0) {
-      //         alert("Please select at least one option before proceeding.");
-      //         return;
-      //       }
-      //       const invoiceAddress =
-      //         parentSection.querySelector(".invoice-payment");
-      //       invoiceAddress.style.display = "block";
-      //     });
-      //   });
-
-      //   // Select the first option by default
-      //   selectElement.selectedIndex = 0;
-      //   const defaultOption =
-      //     selectElement.options[selectElement.selectedIndex].value;
-      //   showSelectedSection(defaultOption);
-      //   updateTotalPrice(); // Update total price on page load
-      // });
-
       document.addEventListener("DOMContentLoaded", function () {
         const selectElement = document.getElementById("experience");
+        const fresherOption = document.getElementById("fresher");
+        const experiencedOption = document.getElementById("experienced");
+        const managerialOption = document.getElementById("managerial");
+        const leadershipOption = document.getElementById("leadership");
         const sections = document.querySelectorAll(".experience");
         const totalPriceSpans = document.querySelectorAll(".total span");
         const originalBorderColor = selectElement.style.borderColor;
@@ -938,6 +886,18 @@
         // Add event listener to select element
         selectElement.addEventListener("change", function () {
           const selectedOption = this.value;
+          fresherOption.value === selectedOption
+            ? (fresherOption.style.fontWeight = 700)
+            : (fresherOption.style.fontWeight = 400);
+          experiencedOption.value === selectedOption
+            ? (experiencedOption.style.fontWeight = 700)
+            : (experiencedOption.style.fontWeight = 400);
+          managerialOption.value === selectedOption
+            ? (managerialOption.style.fontWeight = 700)
+            : (managerialOption.style.fontWeight = 400);
+          leadershipOption.value === selectedOption
+            ? (leadershipOption.style.fontWeight = 700)
+            : (leadershipOption.style.fontWeight = 400);
           resetCheckboxes(); // Reset and check the first checkbox in each category
           showSelectedSection(selectedOption);
           updateTotalPrice();

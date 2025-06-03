@@ -649,10 +649,11 @@ header {
     right 10px center/18px no-repeat;
   outline: 0;
   font-weight: 700;
+  color: #cd5532 !important;
 }
 .pricing .container #experience option:not(:first-child) {
   /* font-weight: 700; */
-  color: #cd5532;
+  color: #cd5532 !important;
 }
 .pricing .container #experience option {
   /* font-weight: 700; */
