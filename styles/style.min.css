@@ -1320,12 +1320,14 @@ footer ul li:first-child {
     margin-top: 1rem;
   }
   .menu .nav-menu {
-    display: none;
+    display: inline-block;
+    transform: translateX(-100%);
     position: absolute;
-    top: 125px;
+    top: 0;
     left: 0;
     background-color: #fff;
-    width: 100%;
+    width: 50%;
+    height: 100vh;
     padding: 1rem;
     font-size: 1.2rem;
   }
@@ -1395,6 +1397,14 @@ footer ul li:first-child {
   .why-galaxy .trusted-images {
     height: 250px;
   }
+
+  .contact-footer {
+    margin-left: auto;
+  }
+
+  .contact-footer.hide {
+    display: none;
+  }
 }
 @media (max-width: 565px) {
   .other-services .services .service i,
@@ -1404,6 +1414,9 @@ footer ul li:first-child {
   .header .logo {
     margin-inline: auto;
     padding-block: 1rem;
+  }
+  .header .container {
+    flex-direction: row-reverse;
   }
   .header .contact .icons {
     gap: 0.5rem;
@@ -1560,14 +1573,17 @@ footer ul li:first-child {
     width: 35%;
     order: 2;
     display: flex;
-    align-items: flex-start;
+    /* align-items: flex-start; */
   }
   .header .contact {
     order: 3;
     margin-top: 1rem;
   }
-  .menu .nav-menu {
+  /* .menu .nav-menu {
     top: 230px;
+  } */
+  .menu .nav-menu.active {
+    transform: translateX(0);
   }
   .experience {
     margin-block: 0.5rem 2rem;
