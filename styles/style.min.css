@@ -176,7 +176,7 @@ header {
   padding: 1rem 0 0;
 }
 .showcase .banner-image {
-  width: 20%;
+  width: 30%;
   display: flex;
   justify-content: flex-end;
 }
@@ -184,7 +184,7 @@ header {
   max-width: 100%;
 }
 .showcase .banner-text {
-  width: 80%;
+  width: 70%;
   display: flex;
   justify-content: flex-start;
 }
@@ -1491,7 +1491,7 @@ footer ul li:first-child {
     font-size: 1rem;
   }
   .showcase h1 {
-    font-size: 1.9rem;
+    font-size: 2.5rem;
   }
   .blog li,
   .blog p,
@@ -1514,11 +1514,15 @@ footer ul li:first-child {
   }
   .showcase {
     margin-top: 235px;
+    height: 300px;
   }
   .showcase .container {
     /* background-image: url("../assets/banner-mobile.png"); */
     padding-top: 2.5rem;
     height: 200px;
+  }
+  .banner-image {
+    height: 100%;
   }
   .showcase .container img {
     align-self: flex-end;
