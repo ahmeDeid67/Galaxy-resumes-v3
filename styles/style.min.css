@@ -164,7 +164,7 @@ header {
 }
 .showcase {
   position: relative;
-  /* height: 600px; */
+  height: 750px;
   max-width: 100%;
   /* background-image: url("../assets/zip2.png"); */
   /* background-position: top; */
@@ -177,6 +177,7 @@ header {
 }
 .showcase .banner-image {
   width: 30%;
+  height: 100%;
   display: flex;
   justify-content: flex-end;
 }
