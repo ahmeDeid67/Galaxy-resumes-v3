@@ -988,6 +988,27 @@ input[type="checkbox"]:checked::after {
   height: 60px;
   border-radius: 50%;
 }
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.shake-icon {
+  animation: shake 0.5s infinite;
+}
 .hidden-box {
   grid-column: 2;
 }
@@ -1584,6 +1605,11 @@ footer ul li:first-child {
   } */
   .menu .nav-menu.active {
     transform: translateX(0);
+  }
+
+  .nav-menu ul {
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 1rem;
   }
   .experience {
     margin-block: 0.5rem 2rem;
