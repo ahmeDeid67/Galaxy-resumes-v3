@@ -196,7 +196,7 @@ header {
   text-align: left;
   font-size: 6.5rem;
   font-weight: 700;
-  padding-left: 4rem;
+  padding-left: 1rem;
 }
 .why__galaxy h2 {
   color: #cd5532;
@@ -1489,6 +1489,9 @@ footer ul li:first-child {
   .other-services .services .service h3,
   .showcase h1 {
     font-size: 1rem;
+  }
+  .showcase h1 {
+    font-size: 1.4rem;
   }
   .blog li,
   .blog p,
