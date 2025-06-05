@@ -179,7 +179,7 @@ header {
   max-width: 20%;
 }
 .showcase .banner-text {
-  width: 40%;
+  width: 50%;
 }
 .showcase h1 {
   /* position: absolute;
@@ -187,7 +187,7 @@ header {
   left: 20px; */
   color: #144072;
   text-align: left;
-  font-size: 4rem;
+  font-size: 5.4rem;
   font-weight: 700;
   padding-left: 4rem;
 }
@@ -1440,6 +1440,9 @@ footer ul li:first-child {
     margin-bottom: 1rem;
     margin-top: 2rem;
   }
+  .showcase h1 {
+    font-size: 2.5rem;
+  }
   .close {
     top: 115px;
     right: 25px;
@@ -1513,7 +1516,8 @@ footer ul li:first-child {
   }
   .showcase .container h1 {
     /* width: 50%; */
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    padding-left: 1rem;
   }
   .why-galaxy .features-right {
     display: grid;
