@@ -178,6 +178,9 @@ header {
 .showcase .container img {
   max-width: 20%;
 }
+.showcase .banner-text {
+  width: 40%;
+}
 .showcase h1 {
   /* position: absolute;
   bottom: 30px;
@@ -185,7 +188,6 @@ header {
   color: #144072;
   text-align: left;
   font-size: 4rem;
-  width: 40%;
   font-weight: 700;
   padding-left: 4rem;
 }
