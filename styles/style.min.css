@@ -1391,12 +1391,21 @@ footer ul li:first-child {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
-    gap: 1rem;
+    /* gap: 1rem; */
     margin-top: 1rem;
   }
   .menu-contact i {
     color: #2eb841;
     font-size: 1.8rem;
+  }
+  .menu-contact-upper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    gap: 1rem;
+  }
+  .menu-contact-upper h3 {
+    color: #144072;
   }
   .pricing--contact {
     font-size: 0.8rem;
