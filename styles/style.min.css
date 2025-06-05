@@ -1512,7 +1512,7 @@ footer ul li:first-child {
     max-width: 25%;
   }
   .showcase .container h1 {
-    width: 50%;
+    /* width: 50%; */
     font-size: 1.2rem;
   }
   .why-galaxy .features-right {
