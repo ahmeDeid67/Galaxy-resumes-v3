@@ -164,12 +164,14 @@ header {
 }
 .showcase {
   position: relative;
-  /* height: 450px; */
+  height: 500px;
   max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem 0 0;
+  /* background-color: #000b2c; */
+  background-image: linear-gradient(45deg, #000b2c, #00214c);
 }
 /* .showcase .banner-image {
   width: 30%;
@@ -191,26 +193,26 @@ header {
   /* position: absolute;
   bottom: 30px;
   left: 20px; */
-  color: #144072;
+  color: #fff;
   text-align: center;
   font-size: 5rem;
   font-weight: 700;
-  padding-left: 1rem;
 }
-.showcase h2 {
+.showcase__content h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   margin-top: 2rem;
 }
-.showcase h3 {
+.showcase__content h3 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
+  margin-top: 1rem;
 }
-.showcase ul li {
+.showcase__content ul li {
   font-size: 1.2rem;
   margin-bottom: 0.8rem;
 }
-.showcase p {
+.showcase__content p {
   font-size: 1.5rem;
   margin-bottom: 0.8rem;
 }
@@ -418,9 +420,12 @@ header {
   content: "\f004";
   color: #aaa;
 }
-.contact-us h2,
-.pricing h2,
-.samples-section h2 {
+.contact-us h1,
+.pricing h1,
+.samples-section h1,
+.other-services h1,
+.terms h1,
+.reviews h2 {
   text-align: center;
   color: #cd5532;
   font-size: 2rem;
