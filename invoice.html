@@ -29,24 +29,13 @@
     <section class="pricing-invoice">
       <div class="container">
         <div class="invoice">
-          <!-- <div class="invoice-title">Experienced Category</div> -->
           <div class="invoice-box">
-            <!-- <ul class="invoice-list">
-              <li class="invoice-item">
-                Indian Resume &dash; <span class="invoice-item-text">2100</span>
-              </li>
-            </ul> -->
             <div class="invoice-total"><strong>Total</strong> - 3000</div>
           </div>
 
           <p class="invoice-choices">Pay through UPI or Net Banking</p>
 
           <div class="invoice-payment">
-            <!-- <img
-              src="./assets/UPI.jpg"
-              alt="Adressess Logo"
-              class="invoice-img"
-            /> -->
             <img
               src="./assets/upi-payment.jpg"
               alt="Parcode Image"
@@ -66,21 +55,16 @@
             <p class="invoice-pay-text">A/c No. - 23060200002209</p>
             <p class="invoice-pay-text">A/c Type - CURRENT</p>
             <p class="invoice-pay-text">IFSC Code - FDRL0002306</p>
-            <!-- <div class="invoice-footer">
-              <div class="invoice-instruction">
-                Once done with payment, simply send us Payment Screenshot
-                through Whats app or BOTIM at 9818749023 and we kick start the
-                work within 5 minutes!!
-              </div>
-            </div> -->
           </div>
 
           <p class="invoice-cta">
-            <span class="invoice-cta-text">Once done with payment, simply send us Payment Screenshot through Whats app at +919818749023</span>
+            <span class="invoice-cta-text"
+              >Once done with payment, simply send us Payment Screenshot through
+              Whats app at +919818749023</span
+            >
           </p>
           <div class="invoice-btns">
-            <a href="pricing.html" class="invoice-btn">Back</a>
-            <!-- <a href="#" class="invoice-btn proceed-btn">Proceed for Payment</a> -->
+            <a href="/pricing" class="invoice-btn">Back</a>
           </div>
         </div>
       </div>
@@ -109,43 +93,12 @@
         );
         const totalPrice = localStorage.getItem("totalPrice");
 
-        // document.querySelector(
-        //   ".invoice-title"
-        // ).innerHTML = `<span>You Selected-:</span> ${
-        //   selectedPlan || "No Selected"
-        // } Category`;
-
-        // invoiceList.innerHTML = "";
-
-        // if (selectedOptions && selectedOptions.length > 0) {
-        //   selectedOptions.forEach((option) => {
-        //     const invoiceItem = document.createElement("div");
-        //     invoiceItem.classList.add("invoice-item");
-        //     invoiceItem.innerHTML = `<li>${option.name} <span>- Rs. ${option.price}</span></li>`;
-        //     invoiceList.appendChild(invoiceItem);
-        //   });
-        // } else {
-        //   const noItems = document.createElement("div");
-        //   noItems.classList.add("invoice-item");
-        //   noItems.textContent = "No items selected";
-        //   invoiceList.appendChild(noItems);
-        // }
-
         invoiceTotal.innerHTML = `<strong>Total</strong> - Rs. ${
           totalPrice || 0
         }`;
 
         localStorage.clear();
       });
-
-      // const invoicePay = document.querySelector(".proceed-btn");
-      // const invoiceAddress = document.querySelector(".invoice-payment");
-
-      // invoicePay.addEventListener("click", (e) => {
-      //   e.preventDefault();
-
-      //   invoiceAddress.style.display = "block";
-      // });
     </script>
   </body>
 </html>

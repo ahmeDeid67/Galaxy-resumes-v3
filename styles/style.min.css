@@ -164,7 +164,7 @@ header {
 }
 .showcase {
   position: relative;
-  height: 750px;
+  /* height: 450px; */
   max-width: 100%;
   display: flex;
   align-items: center;
@@ -185,16 +185,34 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 4rem;
 }
 .showcase h1 {
   /* position: absolute;
   bottom: 30px;
   left: 20px; */
   color: #144072;
-  text-align: left;
-  font-size: 7rem;
+  text-align: center;
+  font-size: 5rem;
   font-weight: 700;
   padding-left: 1rem;
+}
+.showcase h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+.showcase h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.showcase ul li {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+.showcase p {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
 }
 .why__galaxy h2 {
   color: #cd5532;
