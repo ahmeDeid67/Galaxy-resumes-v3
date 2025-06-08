@@ -166,28 +166,25 @@ header {
   position: relative;
   height: 750px;
   max-width: 100%;
-  /* background-image: url("../assets/zip2.png"); */
-  /* background-position: top; */
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem 0 0;
 }
-.showcase .banner-image {
+/* .showcase .banner-image {
   width: 30%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
-}
-.showcase img {
+} */
+/* .showcase img {
   max-width: 100%;
-}
+} */
 .showcase .banner-text {
-  width: 70%;
+  width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 .showcase h1 {
   /* position: absolute;

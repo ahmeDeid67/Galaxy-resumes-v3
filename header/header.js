@@ -1,4 +1,4 @@
-fetch("header/header.html")
+fetch("header/header")
   .then((response) => response.text())
   .then((data) => {
     document.getElementById("header-placeholder").innerHTML = data;
@@ -16,10 +16,7 @@ function addHeaderFunctionality() {
   links.forEach((link) => {
     const linkPage = link.getAttribute("href").split("/").pop();
 
-    if (
-      (currentPage === "" && linkPage === "index.html") ||
-      linkPage === currentPage
-    ) {
+    if ((currentPage === "" && linkPage === "") || linkPage === currentPage) {
       link.classList.add("active1");
     }
   });
