@@ -164,12 +164,16 @@ header {
 }
 .showcase {
   position: relative;
-  height: 500px;
   max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 0 0;
+  padding: 5rem 0;
+}
+.showcase .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .showcase .banner-text {
   width: 70%;
@@ -200,6 +204,25 @@ header {
   left: 0;
   color: green;
   font-weight: bold;
+}
+.banner--right {
+  text-align: center;
+}
+.banner--right p {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+.banner--right .review--box {
+  border: 3px dotted #000;
+  width: 250px;
+  height: 200px;
+  display: inline-block;
+  border-radius: 20px;
+}
+.banner--right .review--box div {
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  padding: 0.5rem;
 }
 .showcase__content h2 {
   font-size: 2.5rem;
@@ -560,6 +583,9 @@ header {
 .reviews {
   padding-bottom: 3rem;
 }
+.reviews h2 {
+  font-size: 3rem;
+}
 /* @keyframes slide {
   from {
     transform: translateX(0);
@@ -569,9 +595,6 @@ header {
   }
 } */
 .slider {
-  overflow: hidden;
-  display: flex;
-  gap: 1rem;
   margin-top: 3rem;
 }
 /* .slider::after,
@@ -619,21 +642,22 @@ header {
   font-size: 2rem;
 } */
 .slider--container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.2rem;
   padding-block: 1rem;
   animation: 150s linear infinite slide;
 }
 .slide {
   width: 100%;
-  /* flex: 0 0 auto; */
   padding: 2rem 2rem 1rem;
   background-color: #f8f8f8;
   border-radius: 10px;
   border: 2px solid #ccc;
-  margin-bottom: 1rem;
 }
-/* .slide:hover {
+.slide:hover {
   transform: scale(1.1);
-} */
+}
 .review--container {
   display: flex;
   align-items: center;
@@ -672,6 +696,36 @@ header {
 .slide .text {
   color: #525252;
   font-size: 0.8rem;
+}
+/* /////////////////////////////////////////// */
+/* /////////////////////////////////////////// */
+/* /////////////////////////////////////////// */
+.ask-section {
+  margin-top: 10rem;
+}
+.ask-section h1 {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding-block: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.asks {
+  padding: 1rem;
+}
+.ask {
+  border: 1px solid #000;
+  margin-bottom: 2rem;
+}
+.ask h3 {
+  border-bottom: 1px solid #000;
+  padding: 1rem;
+  font-size: 1.4rem;
+}
+.ask p {
+  padding: 1rem;
+  font-size: 1rem;
 }
 .pricing .container {
   text-align: center;
@@ -1538,15 +1592,18 @@ footer ul li:first-child {
   }
   .showcase {
     margin-top: 235px;
-    height: 300px;
+    padding: 2rem 0;
   }
   .showcase .container {
-    /* background-image: url("../assets/banner-mobile.png"); */
     padding-top: 2.5rem;
-    height: 200px;
+    flex-direction: column;
   }
   .banner-image {
     height: 100%;
+  }
+  .showcase .banner-text {
+    width: 100%;
+    margin-bottom: 4rem;
   }
   .showcase .container img {
     align-self: flex-end;
@@ -1554,8 +1611,11 @@ footer ul li:first-child {
   }
   .showcase .container h1 {
     /* width: 50%; */
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     padding-left: 1rem;
+  }
+  .banner--bullets {
+    font-size: 1.5rem;
   }
   .why-galaxy .features-right {
     display: grid;
