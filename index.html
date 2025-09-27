@@ -48,9 +48,18 @@
         </div>
         <div class="banner--right">
           <p>Get a Free Resume Review!!</p>
-          <a class="review--box" href="whatsapp://send?phone=+919818749023">
-            <div>Upload your resume by clicking in this box.</div>
-          </a>
+          <div id="dropzone" class="box">
+            <span id="placeholder">You can upload DOC, DOCX, PDF</span>
+            <span id="filename" class="file-name"></span>
+          </div>
+          <input
+            type="file"
+            id="fileInput"
+            accept=".pdf,.doc,.docx"
+            style="display: none"
+          />
+          <button id="submitBtn">Send File</button>
+          <div id="status"></div>
         </div>
       </div>
     </section>
@@ -110,34 +119,6 @@
           <h2>Reviews</h2>
           <div class="slider">
             <div class="slider--container">
-              <!-- <div class="slide">
-                <div class="review--container">
-                  <div class="info">
-                    <div class="avatar">
-                      <img src="./assets/placeholder.png" alt="Placeholder" />
-                    </div>
-                    <div class="content">
-                      <h3>S. Venugopal, Fresher (MBA Finance)</h3>
-                      <div class="starts">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </div>
-                      <p>New Delhi, INDIA</p>
-                    </div>
-                  </div>
-                  <div class="google--logo">
-                    <img src="assets/google.png" alt="Google Logo" />
-                  </div>
-                </div>
-                <hr />
-                <div class="text">
-                  "Highly appreciate, my brand new Academic resume now looks too
-                  good!!"
-                </div>
-              </div> -->
               <div class="slide">
                 <div class="review--container">
                   <div class="info">
@@ -513,36 +494,6 @@
                   pleased with the professional output. Great work!"
                 </div>
               </div>
-              <!-- <div class="slide">
-                <div class="review--container">
-                  <div class="info">
-                    <div class="avatar">
-                      <img src="./assets/placeholder.png" alt="Placeholder" />
-                    </div>
-                    <div class="content">
-                      <h3>Anita Bhardwaj, Leadership (Banking)</h3>
-                      <div class="starts">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </div>
-                      <p>Toronto</p>
-                    </div>
-                  </div>
-                  <div class="google--logo">
-                    <img src="assets/google.png" alt="Google Logo" />
-                  </div>
-                </div>
-                <hr />
-                <div class="text">
-                  "After countless times of trying to consolidate my work
-                  experiences and highlight my skills just like what I read
-                  online, I decided to hire Galaxy Resumes instead. It surely
-                  didn’t disappoint me. Thank you for the excellent resume."
-                </div>
-              </div> -->
             </div>
           </div>
         </section>
@@ -898,7 +849,6 @@
     <!-- Scripts -->
     <script src="header/header.js"></script>
     <script src="footer/footer.js"></script>
-
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -907,6 +857,160 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <script></script>
+    <script>
+      const dropzone = document.getElementById("dropzone");
+      const fileInput = document.getElementById("fileInput");
+      const submitBtn = document.getElementById("submitBtn");
+      const statusEl = document.getElementById("status");
+      let selectedFile = null;
+
+      dropzone.addEventListener("click", () => fileInput.click());
+      fileInput.addEventListener("change", (e) => {
+        selectedFile = e.target.files[0];
+        submitBtn.style.display = "inline-block";
+      });
+
+      ["dragenter", "dragover"].forEach((ev) =>
+        dropzone.addEventListener(ev, (e) => {
+          e.preventDefault();
+          dropzone.style.borderColor = "#4c8dff";
+        })
+      );
+      ["dragleave", "drop"].forEach((ev) =>
+        dropzone.addEventListener(ev, (e) => {
+          e.preventDefault();
+          dropzone.style.borderColor = "#aaa";
+        })
+      );
+      dropzone.addEventListener("drop", (e) => {
+        selectedFile = e.dataTransfer.files[0];
+        submitBtn.style.display = "inline-block";
+      });
+
+      submitBtn.addEventListener("click", () => {
+        if (!selectedFile) return;
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+        const reader = new FileReader();
+        reader.onload = function (evt) {
+          const base64 = evt.target.result.split(",")[1];
+          fetch(
+            "https://script.google.com/macros/s/AKfycbyusz_g2iZLv_QnRXsKqvb5cB1R4lQdi1qgXWFJdasiL5BxQmbSdOtR2sko7eavKEP2-w/exec",
+            {
+              method: "POST",
+              body: new URLSearchParams({
+                filename: selectedFile.name,
+                mimeType: selectedFile.type,
+                file: base64,
+              }),
+            }
+          )
+            .then((r) => r.json())
+            .then((res) => {
+              if (res.status === "success") {
+                statusEl.textContent = "✅ File sent!";
+                selectedFile = null;
+                fileInput.value = "";
+                submitBtn.style.display = "none";
+              } else statusEl.textContent = "❌ Error: " + res.message;
+              submitBtn.disabled = false;
+              submitBtn.textContent = "Send File";
+            })
+            .catch((err) => {
+              statusEl.textContent = "❌ Error: " + err;
+              submitBtn.disabled = false;
+              submitBtn.textContent = "Send File";
+            });
+        };
+        reader.readAsDataURL(selectedFile);
+      });
+      // 1) Initialize EmailJS
+      // emailjs.init("aE7jdtjlYEVpPWqyw"); // <-- replace
+
+      // const dropzone = document.getElementById("dropzone");
+      // const fileInput = document.getElementById("fileInput");
+      // const submitBtn = document.getElementById("submitBtn");
+      // const filenameEl = document.getElementById("filename");
+      // const placeholder = document.getElementById("placeholder");
+      // const statusEl = document.getElementById("status");
+      // let selectedFile = null;
+
+      // function resetUI() {
+      //   selectedFile = null;
+      //   fileInput.value = "";
+      //   filenameEl.textContent = "";
+      //   placeholder.style.display = "block";
+      //   submitBtn.style.display = "none";
+      //   statusEl.textContent = "";
+      // }
+
+      // function handleFile(file) {
+      //   if (!file) return;
+      //   selectedFile = file;
+      //   filenameEl.textContent =
+      //     file.name + " (" + Math.round(file.size / 1024) + " KB)";
+      //   placeholder.style.display = "none";
+      //   submitBtn.style.display = "inline-block";
+      //   statusEl.textContent = "";
+      // }
+
+      // // Click to open file dialog
+      // dropzone.addEventListener("click", () => fileInput.click());
+      // fileInput.addEventListener("change", (e) =>
+      //   handleFile(e.target.files[0])
+      // );
+
+      // // Drag & drop
+      // ["dragenter", "dragover"].forEach((ev) =>
+      //   dropzone.addEventListener(ev, (e) => {
+      //     e.preventDefault();
+      //     dropzone.classList.add("dragover");
+      //   })
+      // );
+      // ["dragleave", "drop"].forEach((ev) =>
+      //   dropzone.addEventListener(ev, (e) => {
+      //     e.preventDefault();
+      //     dropzone.classList.remove("dragover");
+      //   })
+      // );
+      // dropzone.addEventListener("drop", (e) =>
+      //   handleFile(e.dataTransfer.files[0])
+      // );
+
+      // // Submit file to EmailJS
+      // submitBtn.addEventListener("click", () => {
+      //   if (!selectedFile) return;
+
+      //   submitBtn.disabled = true;
+      //   submitBtn.textContent = "Sending...";
+      //   statusEl.textContent = "";
+
+      //   const reader = new FileReader();
+      //   reader.onload = function (evt) {
+      //     const base64 = evt.target.result.split(",")[1];
+
+      //     const params = {
+      //       filename: selectedFile.name,
+      //       file: base64,
+      //     };
+
+      //     // 2) Send via EmailJS
+      //     emailjs
+      //       .send("service_5hubi3r", "template_opddf4j", params)
+      //       .then((res) => {
+      //         statusEl.textContent = "✅ Sent successfully!";
+      //         resetUI();
+      //         submitBtn.disabled = false;
+      //         submitBtn.textContent = "Send File";
+      //       })
+      //       .catch((err) => {
+      //         statusEl.textContent = "❌ Failed: " + err.text;
+      //         submitBtn.disabled = false;
+      //         submitBtn.textContent = "Send File";
+      //       });
+      //   };
+      //   reader.readAsDataURL(selectedFile);
+      // });
+    </script>
   </body>
 </html>
