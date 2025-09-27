@@ -50,7 +50,7 @@
           <p>Get a Free Resume Review!!</p>
           <div id="dropzone" class="box">
             <span id="placeholder">You can upload DOC, DOCX, PDF</span>
-            <span id="filename" class="file-name"></span>
+            <span id="fileName" class="file-name"></span>
           </div>
           <input
             type="file"
@@ -58,7 +58,8 @@
             accept=".pdf,.doc,.docx"
             style="display: none"
           />
-          <button id="submitBtn">Send File</button>
+          <button id="browseBtn">Browse</button>
+          <button id="submitBtn">Submit</button>
           <div id="status"></div>
         </div>
       </div>
@@ -860,14 +861,32 @@
     <script>
       const dropzone = document.getElementById("dropzone");
       const fileInput = document.getElementById("fileInput");
+      const placeholder = document.getElementById("placeholder");
       const submitBtn = document.getElementById("submitBtn");
+      const browseBtn = document.getElementById("browseBtn");
       const statusEl = document.getElementById("status");
       let selectedFile = null;
 
-      dropzone.addEventListener("click", () => fileInput.click());
-      fileInput.addEventListener("change", (e) => {
-        selectedFile = e.target.files[0];
+      function showFileName(file) {
+        selectedFile = file;
+        placeholder.textContent = file.name;
+        browseBtn.style.display = "none";
         submitBtn.style.display = "inline-block";
+      }
+
+      function resetUI() {
+        selectedFile = null;
+        fileInput.value = "";
+        placeholder.textContent = "You can upload DOC, DOCX, PDF";
+        browseBtn.style.display = "inline-block";
+        submitBtn.style.display = "none";
+      }
+
+      dropzone.addEventListener("click", () => fileInput.click());
+      browseBtn.addEventListener("click", () => fileInput.click());
+
+      fileInput.addEventListener("change", (e) => {
+        if (e.target.files[0]) showFileName(e.target.files[0]);
       });
 
       ["dragenter", "dragover"].forEach((ev) =>
@@ -883,8 +902,7 @@
         })
       );
       dropzone.addEventListener("drop", (e) => {
-        selectedFile = e.dataTransfer.files[0];
-        submitBtn.style.display = "inline-block";
+        if (e.dataTransfer.files[0]) showFileName(e.dataTransfer.files[0]);
       });
 
       submitBtn.addEventListener("click", () => {
@@ -909,9 +927,10 @@
             .then((res) => {
               if (res.status === "success") {
                 statusEl.textContent = "✅ File sent!";
-                selectedFile = null;
-                fileInput.value = "";
-                submitBtn.style.display = "none";
+                resetUI();
+                // selectedFile = null;
+                // fileInput.value = "";
+                // submitBtn.style.display = "none";
               } else statusEl.textContent = "❌ Error: " + res.message;
               submitBtn.disabled = false;
               submitBtn.textContent = "Send File";

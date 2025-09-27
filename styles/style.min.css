@@ -242,6 +242,16 @@ header {
   cursor: pointer;
   display: none;
 }
+#browseBtn {
+  margin-top: 15px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #cd5532;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
 #status {
   margin-top: 10px;
   font-size: 14px;
