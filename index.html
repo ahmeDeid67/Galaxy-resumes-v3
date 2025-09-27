@@ -926,11 +926,11 @@
             .then((r) => r.json())
             .then((res) => {
               if (res.status === "success") {
-                statusEl.textContent = "✅ File sent!";
+                statusEl.textContent = "✅ We will get back to you soon!";
+                setTimeout(() => {
+                  statusEl.textContent = "";
+                }, 5000);
                 resetUI();
-                // selectedFile = null;
-                // fileInput.value = "";
-                // submitBtn.style.display = "none";
               } else statusEl.textContent = "❌ Error: " + res.message;
               submitBtn.disabled = false;
               submitBtn.textContent = "Send File";
