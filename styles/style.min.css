@@ -644,6 +644,7 @@ header {
 }
 .reviews h2 {
   font-size: 3rem;
+  margin-block: 0;
 }
 /* @keyframes slide {
   from {
