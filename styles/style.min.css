@@ -1657,7 +1657,7 @@ footer ul li:not(:last-child) {
     padding: 2rem 0;
   }
   .showcase .container {
-    padding-top: 2.5rem;
+    padding-top: 0;
     flex-direction: column;
   }
   .banner-image {
