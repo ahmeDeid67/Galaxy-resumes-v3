@@ -1382,6 +1382,9 @@ footer ul li:not(:last-child) {
   .samples-section {
     margin-top: 165px;
   }
+  .samples-section h1 {
+    margin-top: 4rem;
+  }
   .samples.desktop {
     display: none;
   }
