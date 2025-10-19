@@ -1498,7 +1498,7 @@ footer ul li:not(:last-child) {
   }
   .menu .nav-menu {
     display: inline-block;
-    transform: translateX(-100%);
+    transform: translateX(100%);
     position: absolute;
     top: 0;
     right: 0;
