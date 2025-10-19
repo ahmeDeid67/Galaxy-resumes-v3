@@ -169,11 +169,13 @@ header {
   align-items: center;
   justify-content: center;
   padding: 5rem 0;
+  background-color: rgba(211, 211, 211, 0.274);
 }
 .showcase .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: transparent;
 }
 .showcase .banner-text {
   width: 70%;
@@ -771,6 +773,9 @@ header {
   margin-bottom: 1rem;
   font-size: 2rem;
 }
+.ask-section h1 span {
+  font-size: 4rem;
+}
 .asks {
   padding: 1rem;
 }
@@ -1299,7 +1304,7 @@ footer ul {
   display: flex;
   align-items: center;
 }
-footer ul li:first-child {
+footer ul li:not(:last-child) {
   border-right: 1px solid #7a7a7a;
   margin-right: 1rem;
   padding-right: 1rem;
