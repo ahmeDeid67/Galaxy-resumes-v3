@@ -1777,10 +1777,10 @@ justify-content: flex-end;
   }
   .contact-us,
   .pricing {
-    margin-top: 150px;
+    margin-top: 130px;
   }
   .other-services {
-    margin-top: 145px;
+    margin-top: 185px;
   }
   .blogs {
     margin-top: 125px;
@@ -1910,7 +1910,7 @@ justify-content: flex-end;
     margin-top: 30px;
   }
   .ask-section {
-    margin-top: 9rem;
+    margin-top: 12rem;
   }
   .invoice-pay-text:first-of-type,
   .invoice-pay-text:nth-of-type(2),
