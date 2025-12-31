@@ -93,7 +93,7 @@ header {
   display: none;
 }
 .header .logo {
-  width: 20rem;
+  width: 15rem;
   height: auto;
   margin-top: 0.5rem;
 }
@@ -1379,6 +1379,46 @@ justify-content: flex-end;
   font-size: 1.9rem;
   font-weight: 700;
 }
+
+/* ///////////////////////////////////////////// */
+.mobile-contact-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #fff;
+  cursor: pointer;
+}
+.mobile-contact-footer:first-of-type {
+  right: 30px;
+  /* bottom: 30px; */
+  /* background-color: #81d742; */
+width: 100%;
+display: flex;
+justify-content: flex-end;
+position: relative;
+left: 138px;
+right: 0;
+}
+.mobile-contact-footer:last-of-type {
+  left: 30px;
+  background-color: #2eb841;
+ 
+}
+.mobile-contact-footer:last-child .icon {
+  background-color: #25d366;
+}
+.mobile-contact-footer .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.mobile-contact-footer .icon i {
+  color: #fff;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+/* ///////////////////////////////////////////// */
 @media (max-width: 530px) {
   .container {
     padding-inline: 1rem;
@@ -1615,6 +1655,13 @@ justify-content: flex-end;
   }
 }
 @media (max-width: 565px) {
+  .contact-footer:first-of-type {
+    display: none;
+  }
+  .contact-footer:last-of-type {
+    display: none;
+   
+  }
   .other-services .services .service i,
   .why-galaxy h2 {
     margin-bottom: 1rem;
@@ -1623,9 +1670,12 @@ justify-content: flex-end;
     margin-inline: auto;
     padding-block: 1rem;
   }
-  /* .header .container {
-    flex-direction: row-reverse;
-  } */
+  .header .container {
+    padding-block: .6rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
   .header .container .contact {
     display: none;
   }
@@ -1714,7 +1764,7 @@ justify-content: flex-end;
   }
   .contact-us,
   .pricing {
-    margin-top: 115px;
+    margin-top: 150px;
   }
   .other-services {
     margin-top: 145px;
@@ -1803,7 +1853,7 @@ justify-content: flex-end;
   }
   .menu {
     width: 35%;
-    order: 2;
+    /* order: 2; */
     display: flex;
     /* align-items: flex-start; */
   }
