@@ -81,7 +81,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 .experience.hidden,
 .menu .menu-oc,
@@ -1384,7 +1384,7 @@ justify-content: flex-end;
     padding-inline: 1rem;
   }
   .samples-section {
-    margin-top: 165px;
+    margin-top: 70px;
   }
   .samples-section h1 {
     margin-top: 4rem;
@@ -1623,8 +1623,11 @@ justify-content: flex-end;
     margin-inline: auto;
     padding-block: 1rem;
   }
-  .header .container {
+  /* .header .container {
     flex-direction: row-reverse;
+  } */
+  .header .container .contact {
+    display: none;
   }
   .header .contact .icons {
     gap: 0.5rem;
@@ -1664,7 +1667,7 @@ justify-content: flex-end;
     font-size: 1.5rem;
   }
   .showcase {
-    margin-top: 2px;
+    margin-top: 130px;
     padding: 2rem 0;
   }
   .showcase .container {
@@ -1709,11 +1712,15 @@ justify-content: flex-end;
     width: 90%;
     height: 60%;
   }
-  .blogs,
   .contact-us,
-  .other-services,
   .pricing {
-    margin-top: 230px;
+    margin-top: 115px;
+  }
+  .other-services {
+    margin-top: 145px;
+  }
+  .blogs {
+    margin-top: 125px;
   }
   .pricing h2 {
     margin-block: 0;
@@ -1840,7 +1847,7 @@ justify-content: flex-end;
     margin-top: 30px;
   }
   .ask-section {
-    margin-top: 15rem;
+    margin-top: 9rem;
   }
   .invoice-pay-text:first-of-type,
   .invoice-pay-text:nth-of-type(2),
