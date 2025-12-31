@@ -170,7 +170,6 @@ header {
   align-items: center;
   justify-content: center;
   padding: 5rem 0;
-  background-color: rgba(211, 211, 211, 0.274);
 }
 .showcase .container {
   display: flex;
@@ -1634,6 +1633,9 @@ footer ul li:not(:last-child) {
   .showcase h1 {
     font-size: 1rem;
   }
+  .showcase {
+    background-color: rgba(211, 211, 211, 0.274);
+  }
   .showcase h1 {
     font-size: 2.5rem;
   }
@@ -1888,6 +1890,10 @@ footer ul li:not(:last-child) {
 
   .menu .menu-oc {
     width: initial;
+  }
+
+  .menu .menu-oc p {
+    display: none;
   }
 
   .experience label,
