@@ -1353,14 +1353,17 @@ footer ul li:not(:last-child) {
   cursor: pointer;
 }
 .contact-footer:first-of-type {
-  left: 30px;
+  right: 30px;
   /* bottom: 30px; */
   /* background-color: #81d742; */
 width: 100%;
+display: flex;
+justify-content: flex-end;
 }
 .contact-footer:last-of-type {
-  right: 30px;
+  left: 30px;
   background-color: #2eb841;
+ 
 }
 .contact-footer:last-child .icon {
   background-color: #25d366;
@@ -1661,7 +1664,7 @@ width: 100%;
     font-size: 1.5rem;
   }
   .showcase {
-    margin-top: 200px;
+    margin-top: 2px;
     padding: 2rem 0;
   }
   .showcase .container {
@@ -1759,11 +1762,11 @@ width: 100%;
     font-size: 1.4rem;
   }
   .contact-footer:first-of-type {
-    left: 10px;
+    right: 10px;
     /* background-color: #81d742; */
   }
   .contact-footer:last-of-type {
-    right: 10px;
+    left: 10px;
     background-color: #2eb841;
   }
   .invoice {
