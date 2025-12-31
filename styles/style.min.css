@@ -1382,7 +1382,7 @@ justify-content: flex-end;
 
 /* ///////////////////////////////////////////// */
 .helper {
-  display: flex;
+  display: none;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
@@ -1665,6 +1665,9 @@ justify-content: flex-end;
   }
 }
 @media (max-width: 565px) {
+  .helper{
+    display: flex;
+  }
   .contact-footer:first-of-type {
     display: none;
   }
