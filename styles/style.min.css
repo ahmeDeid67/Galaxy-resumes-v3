@@ -1348,13 +1348,13 @@ footer ul li:not(:last-child) {
   bottom: 30px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   color: #fff;
   cursor: pointer;
 }
 .contact-footer:first-of-type {
   left: 30px;
-  bottom: 30px;
+  /* bottom: 30px; */
   /* background-color: #81d742; */
 width: 100%;
 }
