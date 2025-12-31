@@ -1381,6 +1381,13 @@ justify-content: flex-end;
 }
 
 /* ///////////////////////////////////////////// */
+.helper {
+  display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
 .mobile-contact-footer {
   display: flex;
   justify-content: space-between;
@@ -1392,12 +1399,9 @@ justify-content: flex-end;
   right: 30px;
   /* bottom: 30px; */
   /* background-color: #81d742; */
-width: 100%;
+/* width: 100%; */
 display: flex;
 justify-content: flex-end;
-position: relative;
-left: 138px;
-right: 0;
 }
 .mobile-contact-footer:last-of-type {
   left: 30px;
