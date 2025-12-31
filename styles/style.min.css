@@ -1402,6 +1402,12 @@ right: 0;
 .mobile-contact-footer:last-of-type {
   left: 30px;
   background-color: #2eb841;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
  
 }
 .mobile-contact-footer:last-child .icon {
