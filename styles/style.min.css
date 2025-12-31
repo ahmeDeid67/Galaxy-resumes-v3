@@ -1354,7 +1354,7 @@ footer ul li:not(:last-child) {
 }
 .contact-footer:first-of-type {
   left: 30px;
-  bottom: 100px;
+  bottom: 30px;
   /* background-color: #81d742; */
 width: 100%;
 }
@@ -1760,7 +1760,7 @@ width: 100%;
   }
   .contact-footer:first-of-type {
     left: 10px;
-    background-color: #81d742;
+    /* background-color: #81d742; */
   }
   .contact-footer:last-of-type {
     right: 10px;
