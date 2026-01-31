@@ -98,7 +98,7 @@ header {
   margin-top: 0.5rem;
 }
 .addresses h3 {
-  margin-top: 6rem;
+  margin-top: 10rem;
 }
 .blog h2,
 .blog ol {
@@ -386,7 +386,9 @@ header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 -6px 10px #fff, 0 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow:
+    0 -6px 10px #fff,
+    0 4px 15px rgba(0, 0, 0, 0.15);
 }
 .close,
 .modal-arrows {
@@ -405,7 +407,8 @@ header {
   top: 0;
   left: 0;
   border-radius: 50%;
-  box-shadow: -8px -8px 12px 0 rgba(0, 0, 0, 0.2) inset,
+  box-shadow:
+    -8px -8px 12px 0 rgba(0, 0, 0, 0.2) inset,
     12px 12px 16px rgba(255, 255, 255, 0.5) inset;
 }
 .why-galaxy .trusted p {
