@@ -56,9 +56,19 @@ function addHeaderFunctionality() {
   const menuOpen = document.getElementById("menu-icon-open");
   const menuClose = document.getElementById("menu-icon-close");
 
+  // 🔹 Set active based on current page (Home included)
+  const currentPath = window.location.pathname;
+
+  navLinks.forEach((link) => {
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active1");
+    }
+  });
+
+  // 🔹 Change active on click
   navLinks.forEach((link) => {
     link.addEventListener("click", function () {
-      navLinks.forEach((link) => link.classList.remove("active1"));
+      navLinks.forEach((item) => item.classList.remove("active1"));
       this.classList.add("active1");
       toggleMenu();
     });
