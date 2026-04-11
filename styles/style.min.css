@@ -1439,6 +1439,12 @@ footer ul li:not(:last-child) {
   .container {
     padding-inline: 1rem;
   }
+  .box {
+    height: 75px;
+  }
+  .banner--right p {
+    margin-bottom: 0;
+  }
   .samples-section {
     margin-top: 110px;
   }
