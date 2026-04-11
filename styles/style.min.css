@@ -202,13 +202,13 @@ header {
   position: relative;
   padding-left: 2rem;
   margin-top: 1rem;
-  color: #faee66;
+  color: #ffeace;
 }
 .banner--bullets li::before {
   content: "✔";
   position: absolute;
   left: 0;
-  color: #faee66;
+  color: #ffeace;
   font-weight: bold;
 }
 /* //////////////////////////////////////////////////// */
@@ -276,7 +276,7 @@ header {
 .banner--right p {
   font-size: 1.6rem;
   margin-bottom: 1rem;
-  color: #faee66;
+  color: #ffeace;
 }
 .banner--right .review--box {
   border: 3px dotted #000;
