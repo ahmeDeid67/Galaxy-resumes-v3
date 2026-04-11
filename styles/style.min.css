@@ -187,7 +187,7 @@ header {
   align-items: flex-start;
 }
 .showcase .main-heading {
-  color: #000;
+  color: #fff;
   text-align: left;
   font-size: 3rem;
   font-weight: 700;
@@ -202,12 +202,13 @@ header {
   position: relative;
   padding-left: 2rem;
   margin-top: 1rem;
+  color: #faee66;
 }
 .banner--bullets li::before {
   content: "✔";
   position: absolute;
   left: 0;
-  color: green;
+  color: #faee66;
   font-weight: bold;
 }
 /* //////////////////////////////////////////////////// */
@@ -275,6 +276,7 @@ header {
 .banner--right p {
   font-size: 1.6rem;
   margin-bottom: 1rem;
+  color: #faee66;
 }
 .banner--right .review--box {
   border: 3px dotted #000;
