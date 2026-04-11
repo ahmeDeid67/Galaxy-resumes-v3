@@ -163,7 +163,8 @@ header {
   margin-top: 135px;
 }
 .showcase {
-  margin-top: 140px;
+  margin-top: 110px;
+  background: linear-gradient(to bottom, #cf5733, #ac2411);
 }
 .showcase {
   position: relative;
@@ -521,7 +522,7 @@ header {
   text-align: center;
   color: #cd5532;
   font-size: 2rem;
-  margin-block: 2rem 1rem;
+  margin-block: 3rem 1rem;
   font-family: Jost, sans-serif;
 }
 /* .contact-row {

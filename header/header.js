@@ -13,6 +13,10 @@ function addHeaderFunctionality() {
   const links = document.querySelectorAll(".nav-link");
   const currentPage = window.location.pathname.split("/").pop();
 
+  if (window.location.pathname === "/") {
+    links[0].classList.add("active1"); // Home link
+  }
+
   links.forEach((link) => {
     const linkPage = link.getAttribute("href").split("/").pop();
 
@@ -21,40 +25,11 @@ function addHeaderFunctionality() {
     }
   });
 
-  // Mobile
-  //   const navLinks = document.querySelectorAll(".nav-link");
-  //   const navMenu = document.getElementById("nav-menu");
-  //   const menuOpen = document.getElementById("menu-icon-open");
-  //   const menuClose = document.getElementById("menu-icon-close");
-
-  //   navLinks.forEach((link) => {
-  //     link.addEventListener("click", function () {
-  //       navLinks.forEach((link) => {
-  //         link.classList.remove("active1");
-  //       });
-
-  //       this.classList.add("active1");
-
-  //       toggleMenu();
-  //     });
-  //   });
-
-  //   menuOpen.addEventListener("click", toggleMenu);
-  //   menuClose.addEventListener("click", toggleMenu);
-
-  //   function toggleMenu() {
-  //     const displayStyle = navMenu.style.display === "block" ? "none" : "block";
-  //     navMenu.style.display = displayStyle;
-  //     menuOpen.style.display = displayStyle === "none" ? "inline-block" : "none";
-  //     menuClose.style.display =
-  //       displayStyle === "block" ? "inline-block" : "none";
-  //   }
-  // }
-
   const navLinks = document.querySelectorAll(".nav-link");
   const navMenu = document.getElementById("nav-menu");
   const menuOpen = document.getElementById("menu-icon-open");
   const menuClose = document.getElementById("menu-icon-close");
+  console.log(menuOpen);
 
   // 🔹 Set active based on current page (Home included)
   const currentPath = window.location.pathname;
@@ -65,21 +40,20 @@ function addHeaderFunctionality() {
     }
   });
 
-  // 🔹 Change active on click
   navLinks.forEach((link) => {
     link.addEventListener("click", function () {
-      navLinks.forEach((item) => item.classList.remove("active1"));
+      navLinks.forEach((link) => link.classList.remove("active1"));
       this.classList.add("active1");
       toggleMenu();
     });
   });
-
-  menuOpen.addEventListener("click", toggleMenu);
-  menuClose.addEventListener("click", toggleMenu);
 
   function toggleMenu() {
     const isActive = navMenu.classList.toggle("active");
     menuOpen.style.display = isActive ? "none" : "inline-block";
     menuClose.style.display = isActive ? "inline-block" : "none";
   }
+
+  menuOpen.addEventListener("click", toggleMenu);
+  menuClose.addEventListener("click", toggleMenu);
 }
