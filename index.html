@@ -34,36 +34,67 @@
 
     <!-- HOME PAGE -->
     <section class="showcase">
+      <div class="dots-bg"></div>
+      <div class="dots-bg dots-bg--big"></div>
+      <div class="dots-bg dots-bg--top"></div>
       <div class="container">
         <div class="banner-text">
           <h1 class="main-heading">
-            Get a Customized Resume That Gets You Hired!
+            <!-- Get a Customized Resume That Gets You Hired! -->
+            ATS Optimized Resumes!!
           </h1>
           <!-- <h1 class="main-heading">
             Get a <span style="color: #144072">Customized Resume</span> That
             Gets You <span style="color: #cd5532">Hired!</span>
           </h1> -->
-          <ul class="banner--bullets">
-            <li>ATS Optimized Content</li>
-            <li>Global Delivery</li>
-            <li>Trusted by 2 Lacs+ Customers</li>
-          </ul>
+          <div class="showcase__features">
+            <div class="showcase__feature">
+              <div class="showcase__feature--icon">
+                <img src="assets/goal.png" alt="goal icon" />
+                <p>Keyword optimized</p>
+              </div>
+            </div>
+            <span class="features--seperate"></span>
+            <div class="showcase__feature">
+              <div class="showcase__feature--icon">
+                <img src="assets/user.png" alt="goal icon" />
+                <p>Professional & Impactful</p>
+              </div>
+            </div>
+            <span class="features--seperate"></span>
+            <div class="showcase__feature">
+              <div class="showcase__feature--icon">
+                <img src="assets/uptrend.png" alt="goal icon" />
+                <p>More Shortlists More Opportunities</p>
+              </div>
+            </div>
+          </div>
+          <div class="banner--bullets">
+            <p>Get Discovered. Get Hired.</p>
+          </div>
         </div>
         <div class="banner--right">
-          <p>Get a Free Resume Review!!</p>
-          <div id="dropzone" class="box">
-            <span id="placeholder">You can upload DOC, DOCX, PDF</span>
-            <span id="fileName" class="file-name"></span>
+          <div class="banner--box">
+            <p>Get a Free Resume Review!!</p>
+            <div id="dropzone" class="box">
+              <img
+                class="upload--icon"
+                src="assets/upload.png"
+                alt="Upload Icon"
+              />
+              <span id="placeholder">You can upload DOC, DOCX, PDF</span>
+              <span id="fileName" class="file-name"></span>
+            </div>
+            <input
+              type="file"
+              id="fileInput"
+              accept=".pdf,.doc,.docx"
+              style="display: none"
+            />
+            <button id="browseBtn">Browse</button>
+            <button id="submitBtn">Submit</button>
+            <div id="status"></div>
           </div>
-          <input
-            type="file"
-            id="fileInput"
-            accept=".pdf,.doc,.docx"
-            style="display: none"
-          />
-          <button id="browseBtn">Browse</button>
-          <button id="submitBtn">Submit</button>
-          <div id="status"></div>
         </div>
       </div>
     </section>

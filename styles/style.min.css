@@ -6,7 +6,7 @@ img {
   width: 100%;
 }
 header {
-  background-color: #fff;
+  background-color: #000b1c;
 }
 .showcase h1,
 .why__galaxy h2 {
@@ -81,7 +81,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
+  background-color: #000b1c;
+  color: #fff;
 }
 .experience.hidden,
 .menu .menu-oc,
@@ -151,7 +152,7 @@ header {
 .header .contact a {
   font-size: 1.2rem;
   text-decoration: underline;
-  color: #144072;
+  color: #fff;
   font-weight: bold;
 }
 .menu nav {
@@ -163,16 +164,37 @@ header {
   margin-top: 135px;
 }
 .showcase {
-  margin-top: 110px;
-  background: linear-gradient(to bottom, #cf5733, #ac2411);
-}
-.showcase {
   position: relative;
   max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5rem 0;
+  margin-top: 110px;
+  /* background: linear-gradient(to bottom, #cf5733, #ac2411); */
+  background-color: #000b1c;
+}
+.dots-bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 100px;
+  background-color: #000b1c;
+  background-image: radial-gradient(#1e90ff 2px, transparent 1px);
+  background-size: 18px 18px;
+  background-position: right center;
+  mask-image: linear-gradient(to left, black 20%, transparent 100%);
+}
+.dots-bg.dots-bg--big {
+  left: 0;
+  height: 200px;
+  mask-image: linear-gradient(to right, black 20%, transparent 100%);
+}
+.dots-bg.dots-bg--top {
+  top: -120px;
+  z-index: 1000;
+  height: 120px;
 }
 .showcase .container {
   display: flex;
@@ -192,24 +214,77 @@ header {
   font-size: 3rem;
   font-weight: 700;
 }
+.showcase__features {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  color: #fff;
+  margin-top: 2rem;
+}
+.showcase__feature--icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.features--seperate {
+  width: 5px;
+  height: 120px;
+  background-color: #0052af;
+}
+.showcase__feature img {
+  width: 75px;
+  border: 1px solid #fff;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.showcase__feature p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 .banner--bullets {
   padding-left: 0;
   font-size: 1.5rem;
-  margin-left: 2.4rem;
-  margin-top: 1rem;
+  /* margin-left: 2.4rem; */
+  margin-top: 3rem;
+  background-color: #0052af;
+  padding: 1rem 2rem;
+  transform: skew(-35deg, 0deg);
 }
-.banner--bullets li {
+.banner--bullets p {
   position: relative;
-  padding-left: 2rem;
-  margin-top: 1rem;
-  color: #ffeace;
+  padding-left: 3rem;
+  color: #fff;
+  transform: skew(35deg, 0deg);
 }
-.banner--bullets li::before {
+.banner--bullets p::before {
   content: "✔";
   position: absolute;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
   left: 0;
-  color: #ffeace;
+  color: #fff;
   font-weight: bold;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+@media (max-width: 530px) {
+  .showcase__features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    color: #fff;
+    margin-top: 2rem;
+  }
 }
 /* //////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////// */
@@ -253,7 +328,7 @@ header {
   padding: 10px 18px;
   border: none;
   border-radius: 6px;
-  background: #cd5532;
+  background: #0052af;
   color: #fff;
   font-weight: bold;
   cursor: pointer;
@@ -266,17 +341,31 @@ header {
 /* ////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////// */
 .banner--right {
-  width: 100%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner--box {
+  width: fit-content;
+  padding: 2rem;
+  background-color: #00102a;
+  border: 2px solid #777;
+  border-radius: 25px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.banner--right .upload--icon {
+  width: 70px;
+  margin-bottom: 1.5rem;
+}
 .banner--right p {
   font-size: 1.6rem;
   margin-bottom: 1rem;
-  color: #ffeace;
+  color: #fff;
 }
 .banner--right .review--box {
   border: 3px dotted #000;
@@ -522,7 +611,7 @@ header {
 .terms h1,
 .reviews h2 {
   text-align: center;
-  color: #cd5532;
+  color: #00102a;
   font-size: 2rem;
   margin-block: 3rem 1rem;
   font-family: Jost, sans-serif;
@@ -1319,7 +1408,7 @@ footer ul li:not(:last-child) {
 }
 .blogs .container > h2 {
   font-size: 2rem;
-  color: #cd5532;
+  color: #00102a;
   margin-bottom: 1rem;
 }
 .blog {
@@ -1538,13 +1627,13 @@ footer ul li:not(:last-child) {
     transition: 0.3s ease-in-out;
   }
   .menu ul li:hover {
-    border-bottom-color: #cd5532;
+    border-bottom-color: #0052af;
   }
   .active1 {
-    border-bottom: 4px solid #cd5532;
+    border-bottom: 4px solid #0052af;
   }
   .menu ul li a {
-    color: #000;
+    color: #fff;
     font-size: 1.2rem;
     font-family: Jost, sans-serif;
     padding-block: 0.5rem;
