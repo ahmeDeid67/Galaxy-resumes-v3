@@ -249,7 +249,6 @@ header {
 .banner--bullets {
   padding-left: 0;
   font-size: 1.5rem;
-  /* margin-left: 2.4rem; */
   margin-top: 3rem;
   background-color: #0052af;
   padding: 1rem 2rem;
@@ -277,13 +276,21 @@ header {
 }
 
 @media (max-width: 530px) {
+  .dots-bg {
+    display: none;
+  }
   .showcase__features {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    color: #fff;
-    margin-top: 2rem;
+  }
+  .features--seperate {
+    display: none;
+  }
+  .banner--bullets {
+    transform: skew(0deg, 0deg);
+  }
+  .banner--bullets p {
+    transform: skew(0deg, 0deg);
   }
 }
 /* //////////////////////////////////////////////////// */
@@ -337,6 +344,7 @@ header {
   margin-top: 10px;
   font-size: 14px;
 }
+
 /* ////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////// */
@@ -396,6 +404,15 @@ header {
 .showcase__content p {
   font-size: 1.5rem;
   margin-bottom: 0.8rem;
+}
+@media (max-width: 530px) {
+  .box {
+    flex-direction: row;
+  }
+  .banner--right .upload--icon {
+    width: 50px;
+    margin-top: 1rem;
+  }
 }
 .why__galaxy h2 {
   color: #cd5532;
@@ -1830,7 +1847,8 @@ footer ul li:not(:last-child) {
     font-size: 1.5rem;
   }
   .showcase {
-    margin-top: 160px;
+    background-color: #000b1c;
+    margin-top: 165px;
     padding: 2rem 0;
   }
   .showcase .container {
@@ -1845,7 +1863,6 @@ footer ul li:not(:last-child) {
     margin-bottom: 4rem;
   }
   .showcase .container img {
-    align-self: flex-end;
     max-width: 25%;
   }
   .showcase .container h1 {
