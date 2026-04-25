@@ -94,7 +94,7 @@ header {
   display: none;
 }
 .header .logo {
-  width: 15rem;
+  width: 20rem;
   height: auto;
   margin-top: 0.5rem;
 }
@@ -1798,6 +1798,7 @@ footer ul li:not(:last-child) {
   .header .logo {
     margin-inline: auto;
     padding-block: 1rem;
+    width: 15rem;
   }
   .header .container {
     padding-block: 0.6rem;
@@ -1861,9 +1862,6 @@ footer ul li:not(:last-child) {
   .showcase .banner-text {
     width: 100%;
     margin-bottom: 4rem;
-  }
-  .showcase .container img {
-    max-width: 25%;
   }
   .showcase .container h1 {
     /* width: 50%; */
