@@ -1644,10 +1644,10 @@ footer ul li:not(:last-child) {
     transition: 0.3s ease-in-out;
   }
   .menu ul li:hover {
-    border-bottom-color: #0052af;
+    border-bottom-color: #cd5532;
   }
   .active1 {
-    border-bottom: 4px solid #0052af;
+    border-bottom: 4px solid #cd5532;
   }
   .menu ul li a {
     color: #fff;
