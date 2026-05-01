@@ -1288,10 +1288,6 @@ input[type="checkbox"]:checked::after {
   font-size: 1.5rem;
   color: #cd5532;
 }
-.contact-us .container {
-  /* padding-bottom: 4rem; */
-  /* border-bottom: 1px solid #929292; */
-}
 .get-in-touch {
   color: #cd5532;
   font-size: 1.5rem;
@@ -1859,17 +1855,33 @@ footer ul li:not(:last-child) {
   .banner-image {
     height: 100%;
   }
+  .banner--box {
+    padding: 1rem;
+  }
   .showcase .banner-text {
     width: 100%;
     margin-bottom: 4rem;
   }
   .showcase .container h1 {
-    /* width: 50%; */
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     padding-left: 1rem;
   }
+  .showcase__feature img {
+    width: 60px;
+  }
+  .showcase__feature p {
+    font-size: 1.2rem;
+  }
   .banner--bullets {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin-inline: auto;
+  }
+  .banner--right p {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  #placeholder {
+    font-size: 0.8rem;
   }
   .why-galaxy .features-right {
     display: grid;
@@ -1892,7 +1904,7 @@ footer ul li:not(:last-child) {
   }
   .contact-us,
   .pricing {
-    margin-top: 120px;
+    margin-top: 150px;
   }
   .other-services {
     margin-top: 185px;
@@ -2136,13 +2148,13 @@ footer ul li:not(:last-child) {
     background-position: center;
     background-size: cover;
     width: 100% !important;
-    height: 475px !important;
+    height: 600px !important;
   }
 
   .swiper-slide img {
     display: block;
     width: 100%;
-    height: 475px;
+    height: 600px;
   }
 }
 
