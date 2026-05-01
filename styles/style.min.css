@@ -1877,6 +1877,7 @@ footer ul li:not(:last-child) {
   .banner--bullets {
     font-size: 1.2rem;
     margin-inline: auto;
+    margin-top: 1rem;
   }
   .banner--right p {
     font-size: 1.2rem;
