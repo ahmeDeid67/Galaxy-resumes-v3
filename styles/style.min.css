@@ -1861,6 +1861,7 @@ footer ul li:not(:last-child) {
   .showcase .banner-text {
     width: 100%;
     margin-bottom: 4rem;
+    align-items: center;
   }
   .showcase .container h1 {
     font-size: 1.8rem;
