@@ -264,7 +264,7 @@
           </form>
         </div>
 
-        <div class="managerial experience hidden">
+        <div class="midmanagerial experience hidden">
           <form action="">
             <div>
               <input
@@ -368,17 +368,17 @@
           </form>
         </div>
 
-        <div class="managerial experience hidden">
+        <div class="seniormanagerial experience hidden">
           <form action="">
             <div>
               <input
                 type="checkbox"
                 name="price"
-                id="aa"
+                id="aaa"
                 data-name="Indian Resume"
                 data-price="4000"
               />
-              <label for="aa"
+              <label for="aaa"
                 >Senior Managerial Resume <span>@Rs. 4000</span></label
               >
             </div>
@@ -386,11 +386,11 @@
               <input
                 type="checkbox"
                 name="price"
-                id="dd"
+                id="ddd"
                 data-name="LinkedIn Profile Makeover"
                 data-price="4000"
               />
-              <label for="dd"
+              <label for="ddd"
                 ><span>Linkedin Profile Makeover</span>
                 <span>@Rs. 4000</span></label
               >
@@ -399,11 +399,11 @@
               <input
                 type="checkbox"
                 name="price"
-                id="cc"
+                id="ccc"
                 data-name="Executive Biography"
                 data-price="1500"
               />
-              <label for="cc"
+              <label for="ccc"
                 ><span>Executive Biography</span> <span>@Rs. 1500</span></label
               >
             </div>
@@ -412,11 +412,11 @@
               <input
                 type="checkbox"
                 name="price"
-                id="ee"
+                id="eee"
                 data-name="Profile Updation"
                 data-price="4000"
               />
-              <label for="ee"
+              <label for="eee"
                 ><span>Profiling - Naukri etc. (per site)</span>
                 <span>@Rs. 4000</span></label
               >
@@ -425,11 +425,11 @@
               <input
                 type="checkbox"
                 name="price"
-                id="ff"
+                id="fff"
                 data-name="Email Body Content"
                 data-price="500"
               />
-              <label for="ff"
+              <label for="fff"
                 ><span>Email Body Content</span> <span>@Rs. 500</span></label
               >
             </div>
@@ -437,11 +437,11 @@
               <input
                 type="checkbox"
                 name="price"
-                id="gg"
+                id="ggg"
                 data-name="Winning Interviews"
                 data-price="1000"
               />
-              <label for="gg"
+              <label for="ggg"
                 ><span>Winning Interviews (PDF)</span>
                 <span>@Rs. 1000</span></label
               >
@@ -450,12 +450,12 @@
               <input
                 type="checkbox"
                 name="price"
-                id="ii"
+                id="iii"
                 data-name="Urgent Delivery"
                 data-name="Urgent Delivery"
                 data-price="2500"
               />
-              <label for="ii"
+              <label for="iii"
                 ><span>Urgent Delivery</span>
                 <!-- <span style="font-style: italic">(24 hrs)</span> -->
                 <span>@Rs. 2500</span></label
@@ -720,7 +720,9 @@
         const selectElement = document.getElementById("experience");
         const fresherOption = document.getElementById("fresher");
         const experiencedOption = document.getElementById("experienced");
-        const managerialOption = document.getElementById("managerial");
+        const managerialOption = document.getElementById("midmanagerial");
+        const seniormanagerialOption =
+          document.getElementById("seniormanagerial");
         const leadershipOption = document.getElementById("leadership");
         const sections = document.querySelectorAll(".experience");
         const totalPriceSpans = document.querySelectorAll(".total span");
@@ -784,6 +786,9 @@
           managerialOption.value === selectedOption
             ? (managerialOption.style.fontWeight = 700)
             : (managerialOption.style.fontWeight = 400);
+          seniormanagerialOption.value === selectedOption
+            ? (seniormanagerialOption.style.fontWeight = 700)
+            : (seniormanagerialOption.style.fontWeight = 400);
           leadershipOption.value === selectedOption
             ? (leadershipOption.style.fontWeight = 700)
             : (leadershipOption.style.fontWeight = 400);
